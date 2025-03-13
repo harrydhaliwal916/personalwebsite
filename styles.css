@@ -11,7 +11,7 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #E3F2FD;
   padding: 15px 30px;
   border-bottom: 3px solid #002b7f;
@@ -21,14 +21,14 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  text-align: center;
 }
 
 /* ✅ NAVIGATION MENU */
 .nav-container {
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-menu {
@@ -161,6 +161,7 @@ body {
   display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: center;
 }
 
 .footer-menu a {
