@@ -9,6 +9,7 @@
 body {
     background-color: white;
     color: #273B6D;
+    overflow-x: hidden; /* Prevent horizontal scrolling issues */
 }
 
 /* NAVIGATION BAR */
@@ -19,12 +20,19 @@ body {
     background-color: #d9ebff;
     padding: 15px 20px;
     border-bottom: 3px solid navy;
+    flex-wrap: wrap; /* Fixes alignment issue in Safari */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
 }
 
 .nav-links a {
@@ -33,14 +41,47 @@ body {
     color: #001f3f;
 }
 
-/* Hero Section */
+/* MEDIUM LOGO FIX */
+.medium-logo {
+    max-width: 25px;
+    max-height: 25px;
+    vertical-align: middle;
+}
+
+/* FIX LARGE IMAGE SCALING */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* LET'S CHAT BUTTON */
+.cta-button {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative; /* Fixes floating issue in Safari */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* HERO SECTION */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
-    padding: 80px;
-    flex-wrap: wrap;
+    height: 100vh;
+    padding: 100px;
+    flex-wrap: wrap; /* Ensures proper scaling */
 }
 
 .hero-content {
@@ -50,8 +91,21 @@ body {
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 5vw, 6rem);
+    font-size: 6rem;
     font-weight: bold;
+    color: #273B6D;
+}
+
+.wave {
+    font-size: 8rem;
+}
+
+.scroll-down {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
     color: #273B6D;
 }
 
@@ -62,85 +116,203 @@ body {
 }
 
 .hero-image img {
-    width: 90%;
-    max-width: 700px;
+    max-width: 800px;
     height: auto;
 }
 
-/* About Section */
+/* ABOUT SECTION */
 .about {
     text-align: center;
-    padding: 100px;
+    padding: 100px 20px;
+    margin-bottom: 10px;
     font-family: 'Josefin Sans', sans-serif;
     color: #273B6D;
 }
 
-/* Portfolio Section */
+.about p {
+    padding: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* PORTFOLIO SECTION */
 .portfolio {
     text-align: center;
     padding: 80px;
     margin-top: 0;
+    color: #273B6D;
 }
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
     padding: 50px;
 }
 
-/* Blog Section */
+.portfolio-item img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* BLOG SECTION */
 .blog {
     text-align: center;
-    padding: 100px;
+    padding: 100px 20px;
+    color: #273B6D;
 }
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
 }
 
-/* CTA Button */
-.cta-button, .btn, .project-link {
-    background: #007bff;
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
+.blog-post {
+    background: #f9f9f9;
+    padding: 20px;
     border-radius: 8px;
-    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.blog-post h3 {
+    font-size: 22px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    color: #273B6D;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.read-more {
     display: inline-block;
-    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.cta-button:hover, .btn:hover, .project-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+.read-more:hover {
+    text-decoration: underline;
 }
 
-/* Responsive Design */
+/* CONTACT SECTION */
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+    color: #273B6D;
+}
+
+.contact p {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px;
+}
+
+.contact-links {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.contact-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9ebff;
+    padding: 20px;
+    border-top: 3px solid navy;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #001f3f;
+}
+
+.footer-credit {
+    font-size: 14px;
+    font-weight: bold;
+    color: #001f3f;
+}
+
+/* SAFARI-SPECIFIC FIXES */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* RESPONSIVE FIXES */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
     .hero {
         flex-direction: column;
         text-align: center;
         padding: 40px 20px;
     }
-    
-    .hero-content h1 {
-        font-size: 2rem;
+
+    .hero h1 {
+        font-size: 24px;
     }
-    
-    .hero-image img {
+
+    .hero img {
         width: 80%;
         max-width: 300px;
     }
-    
-    .portfolio, .about, .blog {
-        padding: 60px 20px;
+
+    .portfolio, .about {
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .cta-button {
+        width: 90%;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .cta-button {
+        font-size: 12px;
+    }
+
+    .footer-text {
+        font-size: 10px;
     }
 }
