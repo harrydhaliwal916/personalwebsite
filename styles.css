@@ -7,7 +7,7 @@ body {
   background-color: #ffffff;
 }
 
-/* ✅ HEADER (FIXED NAVBAR WITH BLUE BOX) */
+/* ✅ HEADER (BLUE BOX RESTORED, CENTERED NAV) */
 .header {
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@ body {
   text-align: center;
 }
 
-/* ✅ NAVIGATION MENU (CENTERED) */
+/* ✅ NAVIGATION MENU */
 .nav-container {
   width: 100%;
   display: flex;
@@ -49,7 +49,7 @@ body {
   color: #0047ab;
 }
 
-/* ✅ BLUE BOX AROUND NAVBAR */
+/* ✅ NAVIGATION BLUE BOX */
 .nav-box {
   width: 100%;
   max-width: 1200px;
@@ -69,7 +69,7 @@ body {
   margin-left: 10px;
 }
 
-/* ✅ LET'S CHAT CTA */
+/* ✅ LET'S CHAT BUTTON (STYLISH) */
 .lets-chat {
   padding: 10px 20px;
   background-color: #0047ab;
@@ -123,11 +123,29 @@ body {
   transform: scale(1.05);
 }
 
-/* ✅ FOOTER (BLUE BOX RESTORED) */
+/* ✅ CONTACT SECTION (BEFORE FOOTER) */
+.contact {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #002b7f;
+  transition: 0.3s ease-in-out;
+}
+
+.contact a:hover {
+  color: #0047ab;
+}
+
+/* ✅ FOOTER (BLUE BOX RESTORED, NAV CENTERED) */
 .footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #E3F2FD;
   padding: 15px 30px;
   border-top: 3px solid #002b7f;
@@ -135,7 +153,6 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  position: fixed;
   text-align: center;
 }
 
@@ -164,24 +181,7 @@ body {
   margin-left: 10px;
 }
 
-/* ✅ CONTACT SECTION */
-.contact {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.contact a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #002b7f;
-  transition: 0.3s ease-in-out;
-}
-
-.contact a:hover {
-  color: #0047ab;
-}
-
-/* ✅ MOBILE RESPONSIVENESS */
+/* ✅ MOBILE RESPONSIVENESS (FIXED LAYOUT) */
 @media (max-width: 768px) {
   .header,
   .footer {
