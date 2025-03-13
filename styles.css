@@ -448,106 +448,128 @@ body {
 }
 
 
-/* Mobile Responsive Styling */
+
+ /* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
-  /* Navigation */
-  .nav-container {
+    /* HEADER NAV */
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-nav a {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    /* LET’S CHAT BUTTON */
+    .lets-chat-btn {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* HERO SECTION */
+    .hero-title {
+        font-size: 24px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hero-image {
+        width: 90%;
+        max-width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* PROJECTS SECTION */
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* PODCAST SECTION */
+    .podcast-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* FOOTER FIX */
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-logo {
+        display: block;
+        width: 50px;
+        margin-top: 10px;
+    }
+}
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+  /* Adjust header navigation */
+  nav {
     flex-direction: column;
+    align-items: center;
+  }
+
+  /* Reduce padding/margins */
+  .hero-text {
     text-align: center;
-    padding: 15px 0;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .medium-logo img {
-    width: 24px; /* Slightly bigger on mobile for visibility */
-  }
-
-  /* Footer */
-  .footer-container {
-    text-align: center;
-    flex-direction: column;
     padding: 20px;
   }
 
-  .footer-menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .footer-text {
-    font-size: 12px;
-    margin-top: 10px;
-  }
-
-  /* Hero Section */
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .hero h1 {
-    font-size: 24px;
-  }
-
-  .hero img {
-    width: 80%; /* Resize image for smaller screens */
-    max-width: 300px;
-  }
-
-  /* Portfolio & About Sections */
-  .portfolio, .about {
-    padding: 30px 15px;
-    text-align: center;
-  }
-
-  /* Let's Chat CTA */
-  .cta-button {
+  /* Fix the Let's Chat button */
+  .lets-chat {
     width: 90%;
     text-align: center;
-    font-size: 14px;
-    padding: 10px;
   }
 
-  /* Adjusts text spacing for readability */
-  p {
-    line-height: 1.6;
+  /* Ensure images scale properly */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Medium devices (tablets, 600px - 1024px) */
+@media (max-width: 1024px) {
+  .portfolio-section {
+    grid-template-columns: 1fr; /* Stack projects */
   }
 
-  /* Pangean Wear & Book Section */
-  .pangean-section, .book-section {
-    flex-direction: column;
+  .about-me {
     text-align: center;
-    padding: 20px;
-  }
-
-  .pangean-section img, .book-section img {
-    width: 100%;
-    max-width: 320px;
-    margin-bottom: 15px;
   }
 }
 
-/* Extra Small Screens (Phones) */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 20px;
-  }
-
-  .cta-button {
-    font-size: 12px;
-  }
-
-  .footer-menu {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .footer-text {
-    font-size: 10px;
+/* Large screens (desktops, 1024px and above) */
+@media (min-width: 1025px) {
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
+  
