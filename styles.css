@@ -448,53 +448,106 @@ body {
 }
 
 
-/* Mobile Responsive */
-@media (max-width: 1024px) {
-    .container {
-        width: 90%;
-    }
-
-    .hero-text {
-        font-size: 2rem; /* Adjust font size for tablets */
-    }
-
-    .about-me,
-    .portfolio {
-        padding: 50px 0; /* Reduce padding for better spacing */
-    }
-}
-
+/* Mobile Responsive Styling */
 @media (max-width: 768px) {
-    .hero-text {
-        font-size: 1.8rem; /* Further reduction for mobile */
-    }
+  /* Navigation */
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+  }
 
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Stack portfolio items */
-    }
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .nav-menu {
-        flex-direction: column;
-        text-align: center;
-    }
+  .medium-logo img {
+    width: 24px; /* Slightly bigger on mobile for visibility */
+  }
 
-    .cta-button {
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
+  /* Footer */
+  .footer-container {
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero img {
+    width: 80%; /* Resize image for smaller screens */
+    max-width: 300px;
+  }
+
+  /* Portfolio & About Sections */
+  .portfolio, .about {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  /* Let's Chat CTA */
+  .cta-button {
+    width: 90%;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Adjusts text spacing for readability */
+  p {
+    line-height: 1.6;
+  }
+
+  /* Pangean Wear & Book Section */
+  .pangean-section, .book-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .pangean-section img, .book-section img {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 15px;
+  }
 }
 
+/* Extra Small Screens (Phones) */
 @media (max-width: 480px) {
-    .hero-text {
-        font-size: 1.5rem;
-    }
+  .hero h1 {
+    font-size: 20px;
+  }
 
-    .about-me,
-    .portfolio {
-        padding: 30px 0; /* Less spacing on mobile */
-    }
+  .cta-button {
+    font-size: 12px;
+  }
 
-    .nav-menu {
-        gap: 10px;
-    }
+  .footer-menu {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-text {
+    font-size: 10px;
+  }
 }
