@@ -1,86 +1,83 @@
-/* General Reset */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Header Styling */
 .header {
-    background-color: #d8ebff;
-    border-bottom: 3px solid #002855;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    position: fixed;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #d9eaff; /* Light blue background */
+  border-bottom: 3px solid #1a2a6c; /* Dark blue bottom border */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Header Navigation Fix */
 .navbar {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .navbar ul li {
-    display: inline;
+  display: inline-block;
 }
 
 .navbar ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #002855;
-    font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #1a2a6c;
+  font-size: 16px;
 }
 
-/* Medium Logo Alignment */
+/* Medium Logo in Header */
 .medium-logo {
-    max-width: 30px;
-    height: auto;
-    vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
-/* Fix Let’s Chat Button */
-.lets-chat {
-    background-color: #007bff;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 5px;
-    border: 2px solid #002855;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: 10px;
+/* Let’s Chat Button */
+.lets-chat-btn {
+  background-color: #0047ab;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 2px solid #1a2a6c;
 }
 
-.lets-chat:hover {
-    background-color: #0056b3;
+.lets-chat-btn:hover {
+  background-color: #002b7f;
 }
 
 /* Hero Section */
-.hero-section {
-    padding-top: 120px;
-    text-align: center;
+.hero {
+  text-align: center;
+  margin-top: 80px; /* Space for fixed header */
 }
 
-.hero-image {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
+.hero img {
+  max-width: 100%;
+  height: auto;
 }
 
 .hero-content {
@@ -164,46 +161,62 @@
 }
 
 
-#projects {
-        text-align: center;
-        padding: 50px 0;
-    }
-
+/* Projects Section */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
 
 #projects p {
     font-family: 'Josefin Sans', sans-serif;
     padding: 20px;
 }
 
+/* PROJECT CONTAINER - Wraps all projects */
 .project-container {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    }
+/* PROJECT ITEM - Individual project cards */
+.project-item {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px; /* Ensures consistent size */
+}
 
-    .project-item {
-        width: 300px;
-        text-align: center;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        background: #f9f9f9;
-    }
+/* PROJECT IMAGES */
+.project-item img {
+  max-width: 100%;
+  border-radius: 5px;
+}
 
-    .project-item p {
-        font-family: 'Josefin Sans', sans-serif;
-        padding: 20px;
-    }
+/* PROJECT BUTTON */
+.view-project-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #0047ab;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
 
-
-    .project-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
+.view-project-btn:hover {
+  background-color: #002b7f;
+}
 
     .btn-1 {
         display: inline-block;
@@ -463,65 +476,50 @@
     margin-left: 10px;
 }
 
-/* Fix Mobile Responsiveness */
+/* Media Queries */
 @media screen and (max-width: 768px) {
-    /* Header Fix for Small Screens */
-    .header {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px 0;
-    }
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 
-    .medium-logo {
-        max-width: 25px;
-        margin: 0 auto;
-    }
+  .projects {
+    grid-template-columns: 1fr;
+  }
 
-    .lets-chat {
-        font-size: 14px;
-        padding: 8px 12px;
-        display: block;
-        margin: 10px auto;
-    }
 
-    /* Fix Hero Section */
-    .hero-section {
-        padding-top: 150px;
-    }
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    /* Latest Works Section Fix */
-    .projects {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+  .project-item {
+    width: 90%;
+    max-width: 400px; /* Adjusts card size on mobile */
+  }
+}
 
-    .projects img {
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-    }
+  .hero {
+    text-align: center;
+    padding: 20px;
+  }
 
-    /* Footer Fix */
-    .footer {
-        text-align: center;
-        padding: 20px 0;
-    }
+  .footer-links {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .footer .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer .medium-logo {
-        display: block;
-        margin: 10px auto;
-    }
+  .lets-chat-btn {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+  }
 }
 
