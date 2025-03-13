@@ -1,12 +1,13 @@
-/* 🌍 GLOBAL FONT FIX */
+/* 🌍 GLOBAL STYLES */
 body {
   font-family: 'Copperplate', 'Josefin Sans', sans-serif;
   color: #002b7f;
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
 }
 
-/* ✅ HEADER */
+/* ✅ HEADER (FIXED NAVBAR) */
 .header {
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@ body {
   color: #0047ab;
 }
 
-/* ✅ MEDIUM LOGO */
+/* ✅ MEDIUM LOGO (Header) */
 .medium-logo {
   height: 25px;
   margin-left: 10px;
@@ -48,7 +49,7 @@ body {
 
 /* ✅ LET'S CHAT CTA */
 .lets-chat {
-  padding: 10px 15px;
+  padding: 10px 20px;
   background-color: #0047ab;
   color: white;
   font-weight: bold;
@@ -66,7 +67,7 @@ body {
 /* ✅ HERO SECTION */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 150px 20px 100px 20px;
   max-width: 1200px;
   margin: auto;
 }
@@ -107,11 +108,12 @@ body {
   justify-content: space-between;
   background-color: #E3F2FD;
   padding: 15px 30px;
-  border-top: 3px solid #002b7f; /* Dark blue line */
+  border-top: 3px solid #002b7f;
   width: 100%;
   bottom: 0;
   left: 0;
   right: 0;
+  position: fixed;
 }
 
 .footer-menu {
@@ -176,7 +178,7 @@ body {
   }
 
   .hero {
-    padding: 80px 20px;
+    padding: 120px 20px;
   }
 
   .projects {
