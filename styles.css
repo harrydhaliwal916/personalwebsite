@@ -11,18 +11,22 @@
     border-bottom: 3px solid #002855;
     padding: 10px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    position: fixed;
+    flex-wrap: wrap;
 }
 
+/* Header Navigation Fix */
 .navbar {
     display: flex;
     align-items: center;
     gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -42,14 +46,14 @@
     font-size: 16px;
 }
 
-/* Medium Logo in Header */
+/* Medium Logo Alignment */
 .medium-logo {
     max-width: 30px;
     height: auto;
-    margin-left: 10px;
+    vertical-align: middle;
 }
 
-/* Let’s Chat Button */
+/* Fix Let’s Chat Button */
 .lets-chat {
     background-color: #007bff;
     color: white;
@@ -60,6 +64,7 @@
     border: 2px solid #002855;
     display: inline-block;
     margin-left: auto;
+    margin-right: 10px;
 }
 
 .lets-chat:hover {
@@ -68,7 +73,7 @@
 
 /* Hero Section */
 .hero-section {
-    padding-top: 100px;
+    padding-top: 120px;
     text-align: center;
 }
 
@@ -458,10 +463,9 @@
     margin-left: 10px;
 }
 
-
- /* Mobile Responsive Fixes */
+/* Fix Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-    /* Header Navigation */
+    /* Header Fix for Small Screens */
     .header {
         flex-direction: column;
         text-align: center;
@@ -473,17 +477,11 @@
         gap: 10px;
     }
 
-    .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .medium-logo {
         max-width: 25px;
         margin: 0 auto;
     }
 
-    /* Let’s Chat Button */
     .lets-chat {
         font-size: 14px;
         padding: 8px 12px;
@@ -491,33 +489,31 @@
         margin: 10px auto;
     }
 
-    /* Hero Section Fix */
+    /* Fix Hero Section */
     .hero-section {
         padding-top: 150px;
     }
 
-    .hero-image {
-        max-width: 90%;
-    }
-
-    /* Latest Works Section */
+    /* Latest Works Section Fix */
     .projects {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
-    .project {
-        width: 90%;
-    }
-
-    /* Podcast Logos Fix */
-    .podcast-logos {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+    .projects img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
     }
 
     /* Footer Fix */
+    .footer {
+        text-align: center;
+        padding: 20px 0;
+    }
+
     .footer .navbar {
         flex-direction: column;
         gap: 10px;
@@ -528,3 +524,4 @@
         margin: 10px auto;
     }
 }
+
