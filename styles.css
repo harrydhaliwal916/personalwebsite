@@ -9,7 +9,6 @@
 body {
     background-color: white;
     color: #273B6D;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* NAVIGATION BAR */
@@ -20,7 +19,6 @@ body {
     background-color: #d9ebff;
     padding: 15px 20px;
     border-bottom: 3px solid navy;
-    flex-wrap: wrap;
 }
 
 .nav-links {
@@ -41,15 +39,15 @@ body {
     color: #001f3f;
 }
 
-/* FIX: MEDIUM LOGO SIZE */
+/* MEDIUM LOGO - FIXED SIZE */
 .medium-logo {
-    width: 20px !important;
-    height: 20px !important;
+    width: 25px !important;
+    height: 25px !important;
     vertical-align: middle;
     object-fit: contain;
 }
 
-/* FIX: LET'S CHAT BUTTON POSITIONING */
+/* LET'S CHAT BUTTON - FIXED */
 .cta-button {
     background: #007bff;
     color: white;
@@ -60,7 +58,7 @@ body {
     display: inline-block;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
-    position: fixed; /* Keeps it positioned correctly */
+    position: fixed; /* Fixed placement */
     right: 15px;
     bottom: 30px; /* Adjusted for better placement */
     z-index: 999; /* Ensures it stays on top */
@@ -71,13 +69,6 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* FIX: LARGE IMAGE SCALING */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* HERO SECTION */
 .hero {
     display: flex;
@@ -85,7 +76,6 @@ img {
     align-items: center;
     height: 100vh;
     padding: 100px;
-    flex-wrap: wrap; /* Fixes issues in Safari */
 }
 
 .hero-content {
@@ -120,14 +110,15 @@ img {
 }
 
 .hero-image img {
-    max-width: 800px;
+    width: 800px;
     height: auto;
 }
 
 /* ABOUT SECTION */
 .about {
     text-align: center;
-    padding: 100px 20px;
+    padding: 300px;
+    margin-bottom: 10px;
     font-family: 'Josefin Sans', sans-serif;
     color: #273B6D;
 }
@@ -161,7 +152,7 @@ img {
 /* BLOG SECTION */
 .blog {
     text-align: center;
-    padding: 100px 20px;
+    padding: 250px;
     color: #273B6D;
 }
 
@@ -169,6 +160,12 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+}
+
+.blog p {
+    color: #273B6D;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px;
 }
 
 .blog-post {
@@ -242,7 +239,6 @@ img {
     background-color: #d9ebff;
     padding: 20px;
     border-top: 3px solid navy;
-    flex-wrap: wrap;
 }
 
 .footer-links {
@@ -257,18 +253,6 @@ img {
     text-decoration: none;
     font-weight: bold;
     color: #001f3f;
-}
-
-.footer-credit {
-    font-size: 14px;
-    font-weight: bold;
-    color: #001f3f;
-}
-
-/* SAFARI-SPECIFIC FIXES */
-* {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 /* RESPONSIVE FIXES */
