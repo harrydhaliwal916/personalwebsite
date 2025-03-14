@@ -448,47 +448,147 @@ body {
 }
 
 
-/* Responsive Fixes for Tablets & Smaller Screens */
+/* 📱 Mobile Responsive Styling */
 @media (max-width: 768px) {
+    /* 🔹 Fix Header Navigation Alignment */
     .nav-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding: 10px 0;
     }
 
     .nav-links {
-        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 
+    .nav-links a {
+        display: block;
+        padding: 5px;
+    }
+
+    /* 🔹 Fix Hero Section */
     .hero {
+        flex-direction: column;
         text-align: center;
-        padding: 40px 15px;
+        padding: 40px 20px;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 24px;
     }
 
-    .hero-image img {
-        max-width: 250px;
+    .hero img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    /* 🔹 Fix About Me Section Alignment */
+    .about {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .about p {
+        max-width: 90%;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* 🔹 Fix Portfolio Layout */
+    .portfolio {
+        padding: 30px 15px;
+        text-align: center;
     }
 
     .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* 🔹 Fix My Creations Cards */
+    .creations-section {
+        padding: 20px;
+    }
+
+    .creations-grid {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+    }
+
+    /* 🔹 Fix Blog Section */
+    .blog {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .blog p {
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 10px;
+        line-height: 1.6;
+    }
+
+    .blog-post {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    /* 🔹 Fix Podcast Section */
+    .podcast {
+        padding: 50px 20px;
+        text-align: center;
     }
 
     .podcast iframe {
         width: 90%;
-        max-width: 300px;
+        max-width: 400px;
+        height: auto;
     }
 
-    .contact {
-        padding: 30px 15px;
-    }
-
-    .footer-container {
-        text-align: center;
+    .podcast-buttons {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    .podcast-logos {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* 🔹 Fix Let’s Chat CTA Button */
+    .cta-button {
+        display: block;
+        width: 90%;
+        max-width: 200px;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    /* 🔹 Fix Contact Section */
+    .contact {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .contact-links {
+        font-size: 16px;
+    }
+
+    /* 🔹 Fix Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
         padding: 20px;
     }
 
@@ -496,60 +596,24 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+
+    .footer-text {
+        font-size: 12px;
+        margin-top: 10px;
+    }
 }
 
-/* Mobile (Phones) */
+/* 📱 Extra Small Screens (Phones) */
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 20px;
     }
 
     .cta-button {
         font-size: 12px;
-        padding: 8px 10px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 15px;
-    }
-
-    .portfolio {
-        padding: 30px 15px;
-    }
-
-    .blog {
-        padding: 40px 15px;
-    }
-
-    .creations-container {
-        padding: 20px;
-    }
-
-    .creation-card {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    .podcast iframe {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    .contact {
-        padding: 25px 10px;
-    }
-
-    .footer-container {
-        text-align: center;
-        flex-direction: column;
-        padding: 15px;
     }
 
     .footer-links {
         flex-direction: column;
-        gap: 8px;
-    }
-}
-  
+        gap:
+
