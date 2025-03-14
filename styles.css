@@ -6,6 +6,12 @@
     font-family: 'Copperplate', sans-serif;
 }
 
+/* 🔹 Prevent Horizontal Scrolling */
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: white;
     color: #273B6D;
