@@ -124,34 +124,65 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-/* Portfolio Section */
+/* 📂 Portfolio Section */
 .portfolio {
     text-align: center;
-    padding: 80px;
-    margin-top: 0; /* Remove excess space */
+    padding: 80px 20px;
     color: #273B6D;
-    margin-top: -20px; /* Adjust negative margin to reduce spacing */
-
 }
 
+.portfolio h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 🖼️ Portfolio Grid - Desktop */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    padding: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 🎨 Portfolio Items */
+.portfolio-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
 }
 
 .portfolio-item img {
     width: 100%;
-    max-width: 400px;
-    height: 250px; /* Set a fixed height */
-    object-fit: cover; /* Ensures images are cropped nicely to fit */
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.portfolio p {
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 20px;
+/* 🔗 Project Links */
+.project-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
 }
+
+.project-link:hover {
+    background: #0056b3;
+}
+
 
 
 #projects {
@@ -451,23 +482,30 @@ body {
         line-height: 1.6;
     }
 
-    /* 🔹 Fix Portfolio Layout */
+   /* 📱 Mobile Responsive Portfolio */
+@media (max-width: 768px) {
     .portfolio {
-        padding: 30px 15px;
-        text-align: center;
+        padding: 50px 10px;
+    }
+
+    .portfolio h2 {
+        font-size: 2rem;
     }
 
     .portfolio-grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr); /* Stack projects vertically */
         gap: 20px;
-        padding: 20px;
     }
 
     .portfolio-item {
-        width: 100%;
         max-width: 90%;
         margin: 0 auto;
     }
+
+    .portfolio-item img {
+        max-height: 180px; /* Adjusted for mobile */
+    }
+}
 
     /* 🔹 Fix My Creations Cards */
     .creations-section {
