@@ -448,172 +448,80 @@ body {
 }
 
 
-/* 📱 Mobile Responsive Styling */
+/* 🔹 MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
-    /* 🔹 Fix Header Navigation Alignment */
+    /* Fix Navigation */
     .nav-container {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        padding: 10px 0;
+        padding: 15px 0;
     }
 
-    .nav-links {
+    .nav-menu {
         flex-direction: column;
         gap: 10px;
-        text-align: center;
     }
 
-    .nav-links a {
-        display: block;
-        padding: 5px;
-    }
-
-    /* 🔹 Fix Hero Section */
+    /* Fix Hero Section */
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 40px 20px;
+        padding: 20px;
     }
 
-    .hero h1 {
-        font-size: 24px;
+    .hero-content {
+        max-width: 100%;
     }
 
-    .hero img {
-        width: 80%;
-        max-width: 300px;
+    .hero-image img {
+        max-width: 250px;
     }
 
-    /* 🔹 Fix About Me Section Alignment */
+    /* Fix About Section */
     .about {
         padding: 40px 15px;
-        text-align: center;
     }
 
-    .about p {
-        max-width: 90%;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
-    /* 🔹 Fix Portfolio Layout */
-    .portfolio {
-        padding: 30px 15px;
-        text-align: center;
-    }
-
+    /* Fix Portfolio */
     .portfolio-grid {
         grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .portfolio-item {
-        width: 100%;
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    /* 🔹 Fix My Creations Cards */
-    .creations-section {
-        padding: 20px;
-    }
-
-    .creations-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    /* 🔹 Fix Blog Section */
-    .blog {
-        text-align: center;
-        padding: 60px 20px;
-    }
-
-    .blog p {
-        font-family: 'Josefin Sans', sans-serif;
-        padding: 10px;
-        line-height: 1.6;
-    }
-
-    .blog-post {
-        max-width: 90%;
-        margin: 20px auto;
-    }
-
-    /* 🔹 Fix Podcast Section */
-    .podcast {
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    .podcast iframe {
-        width: 90%;
-        max-width: 400px;
-        height: auto;
-    }
-
-    .podcast-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .podcast-logos {
-        flex-direction: column;
         gap: 15px;
     }
 
-    /* 🔹 Fix Let’s Chat CTA Button */
-    .cta-button {
-        display: block;
-        width: 90%;
-        max-width: 200px;
-        margin: 10px auto;
-        text-align: center;
+    /* Fix My Creations */
+    .my-creations {
+        padding: 40px 15px;
     }
 
-    /* 🔹 Fix Contact Section */
-    .contact {
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .contact-links {
-        font-size: 16px;
-    }
-
-    /* 🔹 Fix Footer */
+    /* Fix Footer */
     .footer-container {
         flex-direction: column;
         text-align: center;
         padding: 20px;
     }
-
-    .footer-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-text {
-        font-size: 12px;
-        margin-top: 10px;
-    }
 }
 
-/* 📱 Extra Small Screens (Phones) */
+/* Extra Small Screens (Phones) */
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .cta-button {
         font-size: 12px;
     }
 
-    .footer-links {
+    .footer-menu {
         flex-direction: column;
-        gap:
+        gap: 8px;
+    }
 
+    .footer-text {
+        font-size: 10px;
+    }
+
+    /* Adjustments to Spotify Embed */
+    .spotify-embed {
+        max-width: 320px;
+    }
+}
