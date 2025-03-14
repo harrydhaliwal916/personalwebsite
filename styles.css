@@ -615,4 +615,17 @@ body {
 
     .footer-links {
         flex-direction: column;
-        gap:
+        gap: 8px;
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }
+} /* <-- ✅ Closing bracket was missing, now fixed */
+
+/* 🔹 Prevent Horizontal Scrolling (Fix for Side-to-Side Movement) */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
