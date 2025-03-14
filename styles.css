@@ -448,107 +448,171 @@ body {
 }
 
 
-/* Mobile Responsive Styling */
+/* 📱 Mobile Responsive Styling */
 @media (max-width: 768px) {
-    /* Navigation */
+    /* 🔹 Fix Header Navigation Alignment */
     .nav-container {
-      flex-direction: column;
-      text-align: center;
-      padding: 15px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
     }
-  
-    .nav-menu {
-      flex-direction: column;
-      gap: 10px;
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
-  
-    .medium-logo img {
-      width: 24px; /* Slightly bigger on mobile for visibility */
+
+    .nav-links a {
+        display: block;
+        padding: 5px;
     }
-  
-    /* Footer */
-    .footer-container {
-      text-align: center;
-      flex-direction: column;
-      padding: 20px;
-    }
-  
-    .footer-menu {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .footer-text {
-      font-size: 12px;
-      margin-top: 10px;
-    }
-  
-    /* Hero Section */
+
+    /* 🔹 Fix Hero Section */
     .hero {
-      flex-direction: column;
-      text-align: center;
-      padding: 40px 20px;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
     }
-  
+
     .hero h1 {
-      font-size: 24px;
+        font-size: 24px;
     }
-  
+
     .hero img {
-      width: 80%; /* Resize image for smaller screens */
-      max-width: 300px;
+        width: 80%;
+        max-width: 300px;
     }
-  
-    /* Portfolio & About Sections */
-    .portfolio, .about {
-      padding: 30px 15px;
-      text-align: center;
+
+    /* 🔹 Fix About Me Section Alignment */
+    .about {
+        padding: 40px 15px;
+        text-align: center;
     }
-  
-    /* Let's Chat CTA */
+
+    .about p {
+        max-width: 90%;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* 🔹 Fix Portfolio Layout */
+    .portfolio {
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* 🔹 Fix My Creations Cards */
+    .creations-section {
+        padding: 20px;
+    }
+
+    .creations-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* 🔹 Fix Blog Section */
+    .blog {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .blog p {
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 10px;
+        line-height: 1.6;
+    }
+
+    .blog-post {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    /* 🔹 Fix Podcast Section */
+    .podcast {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .podcast iframe {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .podcast-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .podcast-logos {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* 🔹 Fix Let’s Chat CTA Button */
     .cta-button {
-      width: 90%;
-      text-align: center;
-      font-size: 14px;
-      padding: 10px;
+        display: block;
+        width: 90%;
+        max-width: 200px;
+        margin: 10px auto;
+        text-align: center;
     }
-  
-    /* Adjusts text spacing for readability */
-    p {
-      line-height: 1.6;
+
+    /* 🔹 Fix Contact Section */
+    .contact {
+        text-align: center;
+        padding: 40px 20px;
     }
-  
-    /* Pangean Wear & Book Section */
-    .pangean-section, .book-section {
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
+
+    .contact-links {
+        font-size: 16px;
     }
-  
-    .pangean-section img, .book-section img {
-      width: 100%;
-      max-width: 320px;
-      margin-bottom: 15px;
+
+    /* 🔹 Fix Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
     }
-  }
-  
-  /* Extra Small Screens (Phones) */
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: 20px;
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
     }
-  
-    .cta-button {
-      font-size: 12px;
-    }
-  
-    .footer-menu {
-      flex-direction: column;
-      gap: 8px;
-    }
-  
+
     .footer-text {
-      font-size: 10px;
+        font-size: 12px;
+        margin-top: 10px;
     }
-  }
-  
+}
+
+/* 📱 Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .cta-button {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap:
