@@ -11,8 +11,8 @@
 </head>
 <body>
 
-<header>
-    <div class="nav-container">
+<header class="header">
+    <nav class="nav-container">
         <!-- 🍔 Hamburger Menu (for mobile) -->
         <div class="hamburger-menu">
             <div class="bar"></div>
@@ -29,7 +29,7 @@
             <li><a href="#pangean-wear">Pangean Wear</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </div>
+    </nav>
 </header>
     
     <!-- HERO SECTION -->
@@ -220,41 +220,39 @@
     </div>
 </footer>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Remove any unwanted hash from the URL (prevents auto-scrolling)
-        if (window.location.hash === "#mc_embed_signup") {
-            history.replaceState(null, null, window.location.pathname);
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    // ✅ Remove any unwanted hash from the URL (prevents auto-scrolling)
+    if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname);
+    }
 
-        // Prevent Mailchimp auto-focus issue
-        let emailInput = document.getElementById("mce-EMAIL");
-        if (emailInput) {
-            emailInput.removeAttribute("autofocus");
-        }
+    // ✅ Fix Mailchimp form autofill issue
+    let emailField = document.getElementById("mce-EMAIL");
+    if (emailField) {
+        emailField.removeAttribute("autofocus");
+    }
 
-        // Ensure page always loads at the top
-        window.scrollTo(0, 0);
-    });
+    // ✅ Ensure page always loads at the top
+    window.scrollTo(0, 0);
 
-    // Remove any lingering anchor link on page load
-    window.onload = function () {
-        setTimeout(function () {
-            if (window.location.hash) {
-                history.replaceState(null, null, window.location.pathname);
-            }
-        }, 100);
-    };
-    
-    document.addEventListener("DOMContentLoaded", function() {
+    // ✅ Fix Hamburger Menu Functionality
     const hamburger = document.querySelector(".hamburger-menu");
     const navLinks = document.querySelector(".nav-links");
 
-    hamburger.addEventListener("click", function() {
-        navLinks.classList.toggle("active");
-    });
+    if (hamburger && navLinks) {
+        hamburger.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    }
 });
-</script>
 
+// ✅ Fix lingering anchor link on page load
+window.onload = function () {
+    setTimeout(function () {
+        if (window.location.hash) {
+            history.replaceState(null, null, window.location.pathname);
+        }
+    }, 100);
+};
 </body>
 </html>
