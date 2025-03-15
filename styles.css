@@ -398,27 +398,45 @@ body {
     background-color: #0056b3;
 }
 
-/* 🔹 Center the Newsletter Form Header & Paragraph */
+/* 🔹 Center the Form Title & Description */
 .newsletter h2,
 .newsletter p {
-    text-align: center; /* Centers the header and paragraph */
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
     width: 100%;
-    display: block;
-    font-family: 'Josefin Sans', sans-serif; /* Ensures correct font */
 }
 
-/* 🔹 Center the Subscribe Button */
+/* 🔹 Adjust Input Fields */
+.newsletter .mc-field-group input {
+    width: 100%; /* Full width */
+    padding: 14px; /* Increase padding */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left; /* Left-align text inside */
+}
+
+/* 🔹 Make Subscribe Button Bigger & Center */
+.clear.foot {
+    text-align: center;
+}
+
 .clear.foot input[type="submit"] {
-    display: block; /* Makes sure it's treated as a full block element */
-    margin: 0 auto; /* Centers the button */
-    width: 100%; /* Makes button full-width on small screens */
-    max-width: 250px; /* Keeps button at a reasonable size on larger screens */
-    padding: 15px;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 14px;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: #007bff; /* Blue button color */
+    background-color: #007bff;
+    color: white;
+    border: none;
     border-radius: 5px;
     text-transform: uppercase;
+    cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
 
@@ -426,28 +444,14 @@ body {
     background-color: #0056b3;
 }
 
-/* 🔹 Adjust Form Position (Centers & Adds Space from Footer) */
+/* 🔹 Add Space Above Footer */
 .newsletter {
-    background: #fff;
-    max-width: 600px;
-    margin: 0 auto 60px; /* Centers the form & adds spacing from the footer */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
 }
 
-/* 🔹 Keep Form Fields Consistent */
-.newsletter .mc-field-group {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.newsletter .mc-field-group input {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* 🔹 Fix for Auto-Scroll to Contact */
+html, body {
+    scroll-behavior: smooth;
 }
 
 
@@ -619,41 +623,20 @@ body {
         font-size: 16px;
     }
 
-/* 🔹 Make Form Responsive */
+/* 🔹 Responsive Tweaks */
 @media (max-width: 768px) {
     .newsletter {
         width: 90%;
-        margin-bottom: 80px; /* More spacing for small screens */
+        margin-bottom: 80px;
     }
 
     .newsletter h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .clear.foot input[type="submit"] {
-        max-width: 100%;
         font-size: 1rem;
         padding: 12px;
-    }
-}
-
-
-/* 🔹 Adjust Form Height for Footer */
-@media (max-width: 768px) {
-    #mc_embed_signup {
-        width: 90%;
-        margin-bottom: 60px; /* Extra space above footer */
-    }
-
-    #mc_embed_signup h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* 🔹 Extra Small Screens */
-@media (max-width: 480px) {
-    #mc_embed_signup h2 {
-        font-size: 1.3rem;
     }
 }
 
