@@ -398,68 +398,84 @@ body {
     background-color: #0056b3;
 }
 
-/* 🔹 Center the Entire Newsletter Section */
-.newsletter {
-    text-align: center;
+/* 📌 Center Form & Fix Spacing */
+#mc_embed_signup {
+    background: #fff;
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto 50px; /* Centers the section and adds space above the footer */
+    max-width: 500px;
+    margin: 30px auto; /* Centers the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* 🔹 Fix Form Heading & Description */
-.newsletter h2 {
-    text-align: center;
+/* 📝 Center Title & Description */
+#mc_embed_signup h2 {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.8rem;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.newsletter p {
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-/* 🔹 Fix Input Fields */
-.newsletter .mc-field-group {
-    width: 100%;
     margin-bottom: 10px;
 }
 
-.newsletter .mc-field-group input {
+#mc_embed_signup p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 📧 Input Field Styling */
+.mc-field-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 12px;
-    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.mc-field-group label {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.mc-field-group input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-/* 🔹 Fix Subscribe Button (Right Size & Centered) */
+/* 🔘 Centering the Subscribe Button */
 .clear.foot {
     text-align: center;
+    margin-top: 15px;
 }
 
-.clear.foot input[type="submit"] {
-    display: inline-block;
-    width: 220px; /* Balanced size */
-    padding: 12px;
-    font-size: 1rem;
-    font-weight: bold;
+#mc-embedded-subscribe {
     background-color: #007bff;
     color: white;
-    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
     border-radius: 5px;
-    text-transform: uppercase;
+    border: none;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 250px;
 }
 
-.clear.foot input[type="submit"]:hover {
+#mc-embedded-subscribe:hover {
     background-color: #0056b3;
 }
+
 
 .footer-container {
   display: flex;
@@ -629,20 +645,24 @@ body {
         font-size: 16px;
     }
 
-/* 🔹 Responsive Fix for Small Screens */
+/* 📱 Responsive Design */
 @media (max-width: 768px) {
-    .newsletter {
+    #mc_embed_signup {
         width: 90%;
+        padding: 15px;
     }
 
-    .newsletter h2 {
-        font-size: 1.5rem;
+    #mc_embed_signup h2 {
+        font-size: 22px;
     }
 
-    .clear.foot input[type="submit"] {
+    .mc-field-group input {
+        max-width: 100%;
+    }
+
+    #mc-embedded-subscribe {
         width: 100%;
-        max-width: 250px;
-        }
+    }
 }
 
     /* 🔹 Fix Footer */
