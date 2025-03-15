@@ -69,7 +69,7 @@ body {
     color: #0056b3;
 }
 
-/* 📌 Medium Logo (Original Size) */
+/* 📌 Medium Logo (Inside Header & Footer Menu) */
 .medium-logo {
     width: 25px;
     height: auto;
@@ -81,7 +81,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 120px 20px 50px; /* Reduced bottom gap */
+    padding: 100px 20px 30px; /* Reduced bottom gap */
     text-align: left;
 }
 
@@ -144,7 +144,7 @@ body {
 /* 📌 Reduce Image Sizes in Portfolio */
 .portfolio-item img {
     width: 100%;
-    max-width: 280px;
+    max-width: 250px;
     height: auto;
 }
 
@@ -154,6 +154,13 @@ body {
 }
 
 /* 📌 My Creations Section Centered */
+.my-creations {
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 40px 20px;
+}
+
+/* 📌 Product Cards Resized & Centered */
 .project-container {
     display: flex;
     justify-content: center;
@@ -162,7 +169,7 @@ body {
 }
 
 .project-item {
-    width: 250px; /* Smaller Cards */
+    width: 240px; /* Smaller Cards */
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -187,12 +194,12 @@ body {
     padding-top: 30px;
 }
 
-/* 📌 Resized & Properly Centered Podcast Players */
+/* 📌 Enlarged Spotify Embed to Show Next Episodes */
 .podcast iframe {
     display: block;
     margin: auto;
-    width: 80%;
-    max-width: 360px;
+    width: 100%;
+    max-width: 450px;
     padding: 10px 0;
 }
 
@@ -214,7 +221,12 @@ body {
     font-family: "Josefin Sans", sans-serif;
 }
 
-/* 📌 Newsletter Form Styling */
+/* 📌 Newsletter Form Styled & Centered */
+.newsletter {
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+}
+
 .newsletter form {
     max-width: 500px;
     margin: auto;
@@ -233,8 +245,16 @@ body {
     background: #f8f9fa;
 }
 
-.footer .medium-logo {
-    width: 25px;
+/* 📌 Footer Navigation Menu */
+.footer-menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer-menu.active {
+    display: flex;
 }
 
 /* 📌 Responsive Fixes */
