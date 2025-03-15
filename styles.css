@@ -25,12 +25,63 @@ body {
     border-bottom: 3px solid #007bff;
 }
 
+/* 📌 Hamburger Menu (Header & Footer) */
+.hamburger-menu, .footer-hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-menu .bar, .footer-hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+}
+
+/* 📌 Navigation Inside Hamburger */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+/* 📌 "Let’s Chat ↗️" CTA */
+.lets-chat {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.lets-chat:hover {
+    color: #0056b3;
+}
+
+/* 📌 Medium Logo (Original Size) */
+.medium-logo {
+    width: 25px;
+    height: auto;
+    margin-left: 10px;
+}
+
 /* 📌 Hero Section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 150px 20px 80px; /* Reduced bottom gap */
+    padding: 120px 20px 50px; /* Reduced bottom gap */
     text-align: left;
 }
 
@@ -40,15 +91,16 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 4.5rem;
+    font-size: 5rem; /* Larger Text */
     font-weight: bold;
-    color: #1a3d7c; /* Replace with your darker blue */
+    color: #1a3d7c; /* Darker Blue */
+    padding: 20px;
 }
 
 /* 📌 Hero Image */
 .hero-image img {
     width: 100%;
-    max-width: 600px;
+    max-width: 650px; /* Bigger Image */
 }
 
 /* 📌 Scroll Down Text */
@@ -62,9 +114,20 @@ body {
     padding: 60px 20px;
     max-width: 800px;
     margin: auto;
+    font-family: "Josefin Sans", sans-serif;
 }
 
-/* 📌 Latest Works */
+.about p {
+    font-size: 1.1rem;
+    padding: 15px 0;
+}
+
+/* 📌 Add Padding to GIF & Paragraphs */
+.about iframe {
+    margin-top: 20px;
+}
+
+/* 📌 Portfolio Section */
 .portfolio {
     text-align: center;
 }
@@ -78,14 +141,19 @@ body {
     margin: auto;
 }
 
-/* 📌 Reduce Image Sizes */
+/* 📌 Reduce Image Sizes in Portfolio */
 .portfolio-item img {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     height: auto;
 }
 
-/* 📌 My Creations Section */
+/* 📌 Portfolio Paragraphs in Josefin Sans */
+.portfolio p {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* 📌 My Creations Section Centered */
 .project-container {
     display: flex;
     justify-content: center;
@@ -94,7 +162,7 @@ body {
 }
 
 .project-item {
-    width: 260px;
+    width: 250px; /* Smaller Cards */
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -110,7 +178,7 @@ body {
     padding: 40px 20px;
 }
 
-/* 📌 Add Padding Between Blog, Podcast & My Products */
+/* 📌 Add Padding Between Blog, Podcast & Products */
 .blog {
     padding-bottom: 30px;
 }
@@ -119,18 +187,20 @@ body {
     padding-top: 30px;
 }
 
-/* 📌 Resized & Centered Spotify & Apple Podcast Players */
+/* 📌 Resized & Properly Centered Podcast Players */
 .podcast iframe {
     display: block;
     margin: auto;
     width: 80%;
-    max-width: 380px;
+    max-width: 360px;
+    padding: 10px 0;
 }
 
 /* 📌 Styled Contact Me Section */
 .contact p {
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 /* 📌 Styled Contact Form */
@@ -153,9 +223,10 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: "Josefin Sans", sans-serif;
+    text-align: center;
 }
 
-/* 📌 Footer Fixes */
+/* 📌 Footer */
 .footer {
     text-align: center;
     padding: 20px;
@@ -167,7 +238,7 @@ body {
 }
 
 /* 📌 Responsive Fixes */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
@@ -179,7 +250,7 @@ body {
     }
 
     .hero-image img {
-        max-width: 450px;
+        max-width: 400px;
     }
 
     .portfolio-grid {
@@ -191,43 +262,13 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .hero-content h1 {
         font-size: 3.5rem;
     }
 
     .hero-image img {
-        max-width: 350px;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .project-item {
-        width: 80%;
-    }
-
-    .contact form {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-
-    .hero-image img {
-        max-width: 280px;
-    }
-
-    .portfolio-item img {
-        max-width: 250px;
-    }
-
-    .project-item {
-        width: 100%;
+        max-width: 300px;
     }
 
     .podcast iframe {
