@@ -410,12 +410,22 @@ body {
 }
 
 /* 💡 Center Newsletter Heading & Description */
+/* ✅ Force Center Header & Paragraph */
 #mc_embed_signup h2 {
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 24px;
-    color: #273B6D;
-    font-weight: bold;
+    text-align: center !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    margin-bottom: 10px !important;
+}
+
+/* ✅ Center the Description Paragraph */
+#mc_embed_signup .indicates-required {
+    text-align: center !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 16px !important;
+    color: #333 !important;
+    margin-bottom: 20px !important;
 }
 
 #mc_embed_signup .indicates-required {
