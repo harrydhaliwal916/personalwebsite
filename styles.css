@@ -46,6 +46,12 @@ button, .button {
     font-size: 1.2rem;
 }
 
+/* 🖋 Apply Josefin Sans to All Paragraphs */
+p, .mc-field-group label, input, textarea {
+    font-family: "Josefin Sans", sans-serif !important;
+    color: #5A8DEE; /* Light Blue */
+}
+
 
 body {
     background-color: white;
@@ -62,13 +68,22 @@ body {
     border-bottom: 3px solid navy;
   }
   
-  .nav-links {
-    list-style: none;
+  /* 📌 Mobile & Desktop Navigation */
+.nav-links {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🟢 Show Menu When Active */
+.nav-links.active {
     display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-  }
   
   .nav-links li {
     display: inline;
@@ -80,12 +95,13 @@ body {
     color: #001f3f;
   }
   
-  /* 📌 Hamburger Menu */
+/* 📌 Always Show Hamburger Menu */
 .hamburger-menu {
-    display: none;
+    display: flex !important; /* Force it to be visible on desktop */
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .hamburger-menu .bar {
@@ -474,6 +490,13 @@ body {
     color: #444;
     margin-bottom: 20px;
     font-family: "Josefin Sans", sans-serif;
+}
+
+/* 🎨 Adjust Form Paragraph & Fields */
+#newsletter p, 
+#newsletter label, 
+#newsletter input {
+    color: #5A8DEE !important; /* Lighter Blue */
 }
 
 /* 📝 Mailchimp Form Styling */
