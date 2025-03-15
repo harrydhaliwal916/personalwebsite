@@ -6,11 +6,12 @@
 }
 
 body {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: Copperplate, "Josefin Sans", sans-serif;
     font-size: 16px;
     color: #333;
     line-height: 1.6;
     overflow-x: hidden; /* Prevents horizontal scrolling */
+    background-color: #f9f9f9;
 }
 
 /* 📌 Header Navigation */
@@ -51,6 +52,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
+    z-index: 1100;
 }
 
 .hamburger-menu .bar {
@@ -84,111 +86,103 @@ body {
     }
 }
 
-/* 📌 Main Sections */
-section {
-    padding: 80px 20px;
+/* 📌 Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
     text-align: center;
+    flex-direction: column;
 }
 
-/* 🔹 Headings */
-h1 {
+.hero-content h1 {
     font-size: 2.5rem;
     font-weight: bold;
 }
 
-h2 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* 📝 Paragraph Styling */
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* 📩 Input Fields */
-input, textarea {
-    font-size: 1rem;
-    font-family: "Josefin Sans", sans-serif;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.hero-image img {
     width: 100%;
-    margin-top: 5px;
+    max-width: 350px;
 }
 
-/* 🔘 Buttons */
-button, .button {
-    font-size: 1.2rem;
-    padding: 12px 20px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    width: 100%;
-}
-
-button:hover, .button:hover {
-    background: #0056b3;
-}
-
-/* 📩 Newsletter Section */
-#newsletter {
+/* 📌 Portfolio Section */
+.portfolio {
+    padding: 80px 20px;
     text-align: center;
-    padding: 60px 20px;
 }
 
-/* ✅ Fix Header & Text Alignment */
-#newsletter h2 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
 }
 
-#newsletter p {
-    font-size: 1.2rem;
-    text-align: center;
-    font-family: "Josefin Sans", sans-serif;
-    margin-bottom: 20px;
-}
-
-/* ✅ Fix Mailchimp Form */
-#mc_embed_signup {
-    background: #fff;
+.portfolio-item {
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* ✅ Fix Form Fields */
-.mc-field-group {
-    margin-bottom: 15px;
-    text-align: left;
+.portfolio-item:hover {
+    transform: translateY(-5px);
 }
 
-.mc-field-group label {
-    font-weight: bold;
-}
-
-/* ✅ Fix Subscribe Button */
-#mc-embedded-subscribe {
+.portfolio-item img {
     width: 100%;
-    background: #007bff;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* 📌 Product Cards (Pangean Wear & My Book) */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.project-item {
+    width: 350px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* 📌 Buttons */
+.btn-1, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
     color: white;
-    font-size: 1.2rem;
-    padding: 12px;
+    background: #007bff;
     border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-1:hover, .btn:hover {
+    background: #0056b3;
 }
 
 /* 📌 Footer */
@@ -199,9 +193,112 @@ button:hover, .button:hover {
     font-size: 14px;
 }
 
-/* 📌 Mobile Styles */
+/* 📌 Responsive Media Queries */
+/* Tablets & Small Laptops (Up to 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        padding: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image img {
+        width: 80%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile-Friendly Fixes (Up to 768px) */
 @media (max-width: 768px) {
-    #mc_embed_signup {
-        max-width: 90%;
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 90%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* Ultra-Small Screens (Up to 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-image img {
+        max-width: 250px;
+    }
+
+    .portfolio-item img {
+        max-width: 100%;
+    }
+
+    .project-item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .btn-1, .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .footer {
+        font-size: 12px;
     }
 }
