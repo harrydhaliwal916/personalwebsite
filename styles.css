@@ -1,4 +1,4 @@
-/* 📌 General Styles */
+/* 📌 Reset & General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -106,6 +106,13 @@ h3 {
     font-weight: bold;
 }
 
+/* 📝 Paragraph Styling */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
 /* 📩 Input Fields */
 input, textarea {
     font-size: 1rem;
@@ -127,6 +134,7 @@ button, .button {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+    width: 100%;
 }
 
 button:hover, .button:hover {
@@ -139,9 +147,11 @@ button:hover, .button:hover {
     padding: 60px 20px;
 }
 
+/* ✅ Fix Header & Text Alignment */
 #newsletter h2 {
     text-align: center;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 #newsletter p {
@@ -151,7 +161,7 @@ button:hover, .button:hover {
     margin-bottom: 20px;
 }
 
-/* 📩 Mailchimp Form */
+/* ✅ Fix Mailchimp Form */
 #mc_embed_signup {
     background: #fff;
     padding: 20px;
@@ -161,7 +171,7 @@ button:hover, .button:hover {
     margin: 0 auto;
 }
 
-/* 🔹 Form Fields */
+/* ✅ Fix Form Fields */
 .mc-field-group {
     margin-bottom: 15px;
     text-align: left;
@@ -171,6 +181,7 @@ button:hover, .button:hover {
     font-weight: bold;
 }
 
+/* ✅ Fix Subscribe Button */
 #mc-embedded-subscribe {
     width: 100%;
     background: #007bff;
@@ -186,4 +197,11 @@ button:hover, .button:hover {
     padding: 20px;
     background: #f8f9fa;
     font-size: 14px;
+}
+
+/* 📌 Mobile Styles */
+@media (max-width: 768px) {
+    #mc_embed_signup {
+        max-width: 90%;
+    }
 }
