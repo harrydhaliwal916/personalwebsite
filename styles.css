@@ -398,60 +398,70 @@ body {
     background-color: #0056b3;
 }
 
-/* 🔹 Mailchimp Form Styling */
+/* 🔹 Base Styles - Apply to All Screen Sizes */
 #mc_embed_signup {
-    background: #f9f9f9;
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 20px;
-    border-radius: 10px;
+    background: #fff;
+    max-width: 600px; /* Limits the width on larger screens */
+    margin: 0 auto; /* Centers the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the Form Heading */
+#mc_embed_signup h2 {
+    font-size: 2rem;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 0 auto;
-    
-}
-
-#mc_embed_signup h3 {
+    margin-bottom: 15px;
     color: #273B6D;
-    font-size: 22px;
-    margin-bottom: 10px;
 }
 
-#mc_embed_signup .mc-field-group {
+/* Style Form Fields */
+.mc-field-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     margin-bottom: 15px;
 }
 
-#mc_embed_signup label {
+.mc-field-group label {
+    font-size: 1rem;
     font-weight: bold;
-    display: block;
     margin-bottom: 5px;
-    color: #333;
+    color: #273B6D;
 }
 
-#mc_embed_signup input[type="text"],
-#mc_embed_signup input[type="email"] {
+.mc-field-group input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    transition: all 0.3s ease-in-out;
 }
 
-#mc_embed_signup .button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
+.mc-field-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 🔹 Subscribe Button */
+.button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #007bff;
+    color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
     transition: background 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-#mc_embed_signup .button:hover {
-    background-color: #0056b3;
+.button:hover {
+    background: #0056b3;
 }
-
 
 .footer-container {
   display: flex;
@@ -621,55 +631,33 @@ body {
         font-size: 16px;
     }
 
-/* 📱 Mobile Optimization for Mailchimp Form */
+/* 🔹 Mobile Optimization */
 @media (max-width: 768px) {
     #mc_embed_signup {
-        width: 100%; /* Makes the form responsive */
+        width: 90%;
         padding: 20px;
     }
 
     #mc_embed_signup h2 {
-        font-size: 1.5rem; /* Adjusts the heading size for mobile */
-        text-align: center;
-    }
-
-    .mc-field-group {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        width: 100%;
+        font-size: 1.5rem;
     }
 
     .mc-field-group label {
         font-size: 1rem;
-        margin-bottom: 5px;
     }
 
     .mc-field-group input {
-        width: 100%;
-        padding: 10px;
         font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        padding: 10px;
     }
 
     .button {
-        width: 100%;
+        font-size: 1.1rem;
         padding: 12px;
-        font-size: 1.2rem;
-        background: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        transition: background 0.3s ease-in-out;
-    }
-
-    .button:hover {
-        background: #0056b3;
     }
 }
 
-/* 📱 Extra Small Screens (Phones) */
+/* 🔹 Extra Small Screens (Phones) */
 @media (max-width: 480px) {
     #mc_embed_signup h2 {
         font-size: 1.3rem;
@@ -684,8 +672,6 @@ body {
         padding: 10px;
     }
 }
-
-
 
     /* 🔹 Fix Footer */
     .footer-container {
