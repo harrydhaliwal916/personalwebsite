@@ -219,5 +219,21 @@
     </div>
 </footer>
 
+<script>
+    // Remove URL Fragment (Prevents auto-scrolling)
+    if (window.location.hash === "#mc_embed_signup") {
+        history.replaceState(null, null, window.location.pathname);
+    }
+
+    // Prevent Mailchimp Autofocus Issue
+    document.addEventListener("DOMContentLoaded", function () {
+        let emailInput = document.getElementById("mce-EMAIL");
+        if (emailInput) {
+            emailInput.removeAttribute("autofocus");
+        }
+    });
+</script>
+
+
 </body>
 </html>
