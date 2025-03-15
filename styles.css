@@ -398,38 +398,55 @@ body {
     background-color: #0056b3;
 }
 
-/* 🔹 Center the Form Title & Description */
-.newsletter h2,
+/* 🔹 Center the Entire Newsletter Section */
+.newsletter {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 50px; /* Centers the section and adds space above the footer */
+}
+
+/* 🔹 Fix Form Heading & Description */
+.newsletter h2 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 .newsletter p {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    width: 100%;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-/* 🔹 Adjust Input Fields */
+/* 🔹 Fix Input Fields */
+.newsletter .mc-field-group {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 .newsletter .mc-field-group input {
-    width: 100%; /* Full width */
-    padding: 14px; /* Increase padding */
+    width: 100%;
+    padding: 12px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    text-align: left; /* Left-align text inside */
 }
 
-/* 🔹 Make Subscribe Button Bigger & Center */
+/* 🔹 Fix Subscribe Button (Right Size & Centered) */
 .clear.foot {
     text-align: center;
 }
 
 .clear.foot input[type="submit"] {
     display: inline-block;
-    width: 100%;
-    max-width: 300px;
-    margin: 10px auto;
-    padding: 14px;
-    font-size: 1.2rem;
+    width: 220px; /* Balanced size */
+    padding: 12px;
+    font-size: 1rem;
     font-weight: bold;
     background-color: #007bff;
     color: white;
@@ -443,17 +460,6 @@ body {
 .clear.foot input[type="submit"]:hover {
     background-color: #0056b3;
 }
-
-/* 🔹 Add Space Above Footer */
-.newsletter {
-    margin-bottom: 60px;
-}
-
-/* 🔹 Fix for Auto-Scroll to Contact */
-html, body {
-    scroll-behavior: smooth;
-}
-
 
 .footer-container {
   display: flex;
@@ -623,21 +629,20 @@ html, body {
         font-size: 16px;
     }
 
-/* 🔹 Responsive Tweaks */
+/* 🔹 Responsive Fix for Small Screens */
 @media (max-width: 768px) {
     .newsletter {
         width: 90%;
-        margin-bottom: 80px;
     }
 
     .newsletter h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .clear.foot input[type="submit"] {
-        font-size: 1rem;
-        padding: 12px;
-    }
+        width: 100%;
+        max-width: 250px;
+        }
 }
 
     /* 🔹 Fix Footer */
