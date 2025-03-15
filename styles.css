@@ -398,9 +398,9 @@ body {
     background-color: #0056b3;
 }
 
-/* 🔹 Center the Form Header & Paragraph */
-#mc_embed_signup h2,
-#mc_embed_signup p {
+/* 🔹 Center the Newsletter Form Header & Paragraph */
+.newsletter h2,
+.newsletter p {
     text-align: center; /* Centers the header and paragraph */
     width: 100%;
     display: block;
@@ -408,7 +408,7 @@ body {
 }
 
 /* 🔹 Center the Subscribe Button */
-#mc-embedded-subscribe {
+.clear.foot input[type="submit"] {
     display: block; /* Makes sure it's treated as a full block element */
     margin: 0 auto; /* Centers the button */
     width: 100%; /* Makes button full-width on small screens */
@@ -422,12 +422,12 @@ body {
     transition: background 0.3s ease-in-out;
 }
 
-#mc-embedded-subscribe:hover {
+.clear.foot input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* 🔹 Adjust Form Position (Keeps it Clean) */
-#mc_embed_signup {
+/* 🔹 Adjust Form Position (Centers & Adds Space from Footer) */
+.newsletter {
     background: #fff;
     max-width: 600px;
     margin: 0 auto 60px; /* Centers the form & adds spacing from the footer */
@@ -437,12 +437,12 @@ body {
 }
 
 /* 🔹 Keep Form Fields Consistent */
-.mc-field-group {
+.newsletter .mc-field-group {
     text-align: center;
     margin-bottom: 15px;
 }
 
-.mc-field-group input {
+.newsletter .mc-field-group input {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
@@ -621,21 +621,22 @@ body {
 
 /* 🔹 Make Form Responsive */
 @media (max-width: 768px) {
-    #mc_embed_signup {
+    .newsletter {
         width: 90%;
         margin-bottom: 80px; /* More spacing for small screens */
     }
 
-    #mc_embed_signup h2 {
+    .newsletter h2 {
         font-size: 1.5rem;
     }
 
-    #mc-embedded-subscribe {
+    .clear.foot input[type="submit"] {
         max-width: 100%;
         font-size: 1rem;
         padding: 12px;
     }
 }
+
 
 /* 🔹 Adjust Form Height for Footer */
 @media (max-width: 768px) {
