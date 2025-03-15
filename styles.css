@@ -398,37 +398,47 @@ body {
     background-color: #0056b3;
 }
 
-/* 🔹 Center the Header & Paragraph */
-#mc_embed_signup h2 {
-    text-align: center;  /* Centers the heading */
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #273B6D;
-}
-
+/* 🔹 Center the Form Header & Paragraph */
+#mc_embed_signup h2,
 #mc_embed_signup p {
-    text-align: center; /* Centers the paragraph */
-    font-family: 'Josefin Sans', sans-serif; /* Apply Josefin Sans font */
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #555; /* Subtle color */
+    text-align: center; /* Centers the header and paragraph */
+    width: 100%;
+    display: block;
+    font-family: 'Josefin Sans', sans-serif; /* Ensures correct font */
 }
 
-/* 🔹 Adjust Form Position */
+/* 🔹 Center the Subscribe Button */
+#mc-embedded-subscribe {
+    display: block; /* Makes sure it's treated as a full block element */
+    margin: 0 auto; /* Centers the button */
+    width: 100%; /* Makes button full-width on small screens */
+    max-width: 250px; /* Keeps button at a reasonable size on larger screens */
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #007bff; /* Blue button color */
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+}
+
+#mc-embedded-subscribe:hover {
+    background-color: #0056b3;
+}
+
+/* 🔹 Adjust Form Position (Keeps it Clean) */
 #mc_embed_signup {
     background: #fff;
     max-width: 600px;
-    margin: 0 auto 40px; /* Moves the form slightly above the footer */
+    margin: 0 auto 60px; /* Centers the form & adds spacing from the footer */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 🔹 Form Fields Styling */
+/* 🔹 Keep Form Fields Consistent */
 .mc-field-group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -439,6 +449,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 
 .footer-container {
   display: flex;
@@ -607,6 +618,24 @@ body {
     .contact-links {
         font-size: 16px;
     }
+
+/* 🔹 Make Form Responsive */
+@media (max-width: 768px) {
+    #mc_embed_signup {
+        width: 90%;
+        margin-bottom: 80px; /* More spacing for small screens */
+    }
+
+    #mc_embed_signup h2 {
+        font-size: 1.5rem;
+    }
+
+    #mc-embedded-subscribe {
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
 
 /* 🔹 Adjust Form Height for Footer */
 @media (max-width: 768px) {
