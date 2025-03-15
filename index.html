@@ -220,39 +220,42 @@
     </div>
 </footer>
 
-document.addEventListener("DOMContentLoaded", function () {
-    // ✅ Remove any unwanted hash from the URL (prevents auto-scrolling)
-    if (window.location.hash) {
-        history.replaceState(null, null, window.location.pathname);
-    }
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Remove any unwanted hash from the URL (prevents auto-scrolling)
+        if (window.location.hash === "#mc_embed_signup") {
+            history.replaceState(null, null, window.location.pathname);
+        }
 
-    // ✅ Fix Mailchimp form autofill issue
-    let emailField = document.getElementById("mce-EMAIL");
-    if (emailField) {
-        emailField.removeAttribute("autofocus");
-    }
+        // Prevent Mailchimp auto-focus issue
+        let emailInput = document.getElementById("mce-EMAIL");
+        if (emailInput) {
+            emailInput.removeAttribute("autofocus");
+        }
 
-    // ✅ Ensure page always loads at the top
-    window.scrollTo(0, 0);
+        // Ensure page always loads at the top
+        window.scrollTo(0, 0);
+    });
 
-    // ✅ Fix Hamburger Menu Functionality
-    const hamburger = document.querySelector(".hamburger-menu");
-    const navLinks = document.querySelector(".nav-links");
+    // Remove any lingering anchor link on page load
+    window.onload = function () {
+        setTimeout(function () {
+            if (window.location.hash) {
+                history.replaceState(null, null, window.location.pathname);
+            }
+        }, 100);
+    };
 
-    if (hamburger && navLinks) {
+    // 🍔 Mobile Hamburger Menu Functionality
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navLinks = document.querySelector(".nav-links");
+
         hamburger.addEventListener("click", function () {
             navLinks.classList.toggle("active");
         });
-    }
-});
+    });
+</script>
 
-// ✅ Fix lingering anchor link on page load
-window.onload = function () {
-    setTimeout(function () {
-        if (window.location.hash) {
-            history.replaceState(null, null, window.location.pathname);
-        }
-    }, 100);
-};
 </body>
 </html>
