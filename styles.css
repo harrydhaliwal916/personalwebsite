@@ -399,46 +399,57 @@ body {
 }
 
 
-/* ✅ Force Center Alignment for Header */
+/* ✅ Force Centering for Everything */
+#mc_embed_signup {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 20px 0 !important;
+}
+
+/* ✅ Fix Header Alignment */
 #mc_embed_signup h2 {
-    display: block !important;
     text-align: center !important;
     font-family: 'Josefin Sans', sans-serif !important;
     font-size: 28px !important;
     font-weight: bold !important;
-    width: 100% !important;
-    margin: 0 auto 10px auto !important;
+    margin-bottom: 10px !important;
 }
 
-/* ✅ Force Center Alignment for Paragraph */
+/* ✅ Fix Paragraph Alignment */
 #mc_embed_signup .indicates-required {
-    display: block !important;
     text-align: center !important;
     font-family: 'Josefin Sans', sans-serif !important;
     font-size: 16px !important;
     color: #333 !important;
-    width: 100% !important;
-    margin: 0 auto 20px auto !important;
+    margin-bottom: 20px !important;
 }
 
-/* ✅ Ensure the Entire Form is Centered */
-#mc_embed_signup {
+/* ✅ Fix Form Fields Alignment */
+#mc_embed_signup .mc-field-group {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto 15px auto !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    width: 100% !important;
 }
 
-/* ✅ Ensure the Form Fields Have Proper Spacing */
-#mc_embed_signup .mc-field-group {
-    margin-bottom: 15px !important;
+/* ✅ Fix Input Fields */
+#mc_embed_signup input[type="email"],
+#mc_embed_signup input[type="text"] {
     width: 100% !important;
-    max-width: 400px !important; /* Adjust width for better layout */
+    font-family: 'Josefin Sans', sans-serif !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    border: 1px solid #ccc !important;
 }
 
-/* ✅ Ensure the Subscribe Button is Centered */
+/* ✅ Center the Subscribe Button */
 #mc_embed_signup .clear.foot {
     text-align: center !important;
 }
@@ -448,9 +459,21 @@ body {
     margin: 10px auto !important;
     font-size: 16px !important;
     padding: 12px 24px !important;
-    width: auto !important;
+    width: 150px !important;
+    text-align: center !important;
+    background-color: #007bff !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
 }
 
+/* ✅ Ensure the Footer is Fixed */
+.footer-container {
+    text-align: center !important;
+    padding: 20px 0 !important;
+    width: 100% !important;
+}
 /* 💡 Adjust Footer Spacing */
 .footer-container {
     padding-top: 20px; /* Moves the footer down */
