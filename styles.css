@@ -21,12 +21,7 @@ body {
     align-items: center;
     padding: 20px;
     background: white;
-    position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
     border-bottom: 3px solid #007bff;
 }
 
@@ -43,6 +38,23 @@ body {
     height: 3px;
     background: #333;
     margin: 5px 0;
+}
+
+/* 📌 Navigation Inside Hamburger */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links.active {
+    display: flex;
 }
 
 /* 📌 "Let’s Chat ↗️" CTA */
@@ -69,7 +81,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 180px 20px;
+    padding: 200px 20px;
     text-align: left;
 }
 
@@ -79,14 +91,14 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: bold;
     color: #007bff;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
 }
 
 /* 📌 Scroll Down Text */
@@ -94,28 +106,49 @@ body {
     font-family: "Josefin Sans", sans-serif;
 }
 
-/* 📌 Latest Works Centered */
+/* 📌 Center Latest Works */
+.portfolio {
+    text-align: center;
+}
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     justify-content: center;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* 📌 Product Cards Centered */
+/* 📌 Product Cards Resized & Centered */
 .project-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* 📌 Center Blog, Podcast & Contact Form */
-.blog, .podcast, .contact {
+.project-item {
+    width: 280px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding: 20px;
 }
 
+/* 📌 Center Blog, Podcast & Contact Sections */
+.blog, .podcast, .contact, .newsletter {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* 📌 Center & Resize Spotify Embed */
 .podcast iframe {
     display: block;
     margin: auto;
+    width: 80%;
+    max-width: 400px;
 }
 
 /* 📌 Styled Contact Form */
@@ -138,19 +171,43 @@ body {
 }
 
 /* 📌 Footer Fixes */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
 .footer .medium-logo {
     width: 25px;
 }
 
 /* 📌 Responsive Fixes */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .hero {
         flex-direction: column;
         text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 2.8rem;
+        font-size: 3.5rem;
+    }
+
+    .hero-image img {
+        max-width: 450px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
     }
 
     .hero-image img {
@@ -176,10 +233,14 @@ body {
     }
 
     .hero-image img {
-        max-width: 250px;
+        max-width: 300px;
     }
 
     .project-item {
+        width: 100%;
+    }
+
+    .podcast iframe {
         width: 100%;
     }
 }
