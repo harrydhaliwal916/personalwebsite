@@ -411,6 +411,15 @@ body {
     font-family: 'Josefin Sans', sans-serif; /* Apply Josefin Sans */
 }
 
+.newsletter h2 {
+  text-align: center;
+  padding: 10px; 
+ 
+.newsletter p {
+	text-align: center;
+  padding: 10px; 
+  ont-family: 'Josefin Sans', sans-serif;
+
 /* 📝 Centering Header & Paragraph */
 #mc_embed_signup h2 {
     font-family: 'Josefin Sans', sans-serif;
