@@ -1,107 +1,56 @@
-/* General Reset */
+/* 📌 General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Copperplate', sans-serif;
 }
 
-/* 🎨 Global Styles */
 body {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 16px; /* Adjust globally */
+    font-size: 16px;
     color: #333;
-}
-
-/* 🔹 Headings (H1, H2, H3) */
-h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* 📝 Paragraphs & General Text */
-p {
-    font-size: 1.2rem;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-/* 📩 Input Fields */
-input, textarea {
-    font-size: 1rem;
-    font-family: "Josefin Sans", sans-serif;
-}
-
-/* 🔘 Buttons */
-button, .button {
-    font-size: 1.2rem;
-}
-
-/* 🖋 Apply Josefin Sans to All Paragraphs */
-p, .mc-field-group label, input, textarea {
-    font-family: "Josefin Sans", sans-serif !important;
-    color: #5A8DEE; /* Light Blue */
-}
-
-
-body {
-    background-color: white;
-    color: #273B6D;
-}
-
-/* NAVIGATION BAR */
-.nav-container {
+/* 📌 Header Navigation */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d9ebff;
-    padding: 15px 20px;
-    border-bottom: 3px solid navy;
-  }
-  
-  /* 📌 Mobile & Desktop Navigation */
-.nav-links {
-    display: none; /* Initially hidden */
-    flex-direction: column;
+    padding: 20px;
     background: white;
-    position: absolute;
-    top: 60px;
-    left: 0;
+    position: fixed;
     width: 100%;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/* 🟢 Show Menu When Active */
-.nav-links.active {
+.nav-links {
+    list-style: none;
     display: flex;
-  
-  .nav-links li {
-    display: inline;
-  }
-  
-  .nav-links a {
+    gap: 20px;
+}
+
+.nav-links a {
     text-decoration: none;
+    color: #333;
     font-weight: bold;
-    color: #001f3f;
-  }
-  
-/* 📌 Always Show Hamburger Menu */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* 📌 Hamburger Menu */
 .hamburger-menu {
-    display: flex !important; /* Force it to be visible on desktop */
+    display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
-    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .hamburger-menu .bar {
@@ -111,519 +60,8 @@ body {
     margin: 5px 0;
     transition: 0.3s;
 }
-  /* MEDIUM LOGO */
-  .medium-logo {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-  }
-  
-/* Let's Chat Button */
-.cta-button {
-    background:#007bff;
-    color: white;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    padding: 100px;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 50%;
-    text-align: left;
-}
-
-.hero-content h1 {
-    font-size: 6rem;
-    font-weight: bold;
-    color: #273B6D;
-}
-
-.wave {
-    font-size: 8rem;
-}
-
-.scroll-down {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 50px;
-    text-align: left;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #273B6D;
-}
-
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image img {
-    width: 800px;
-    height: auto;
-}
-
-/* About Section */
-.about {
-    text-align: center;
-    padding: 300px;
-    margin-bottom: 10px;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #273B6D;
-}
-
-.about p {
-    padding: 20px;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-/* 📂 Portfolio Section */
-.portfolio {
-    text-align: center;
-    padding: 80px 20px;
-    color: #273B6D;
-}
-
-.portfolio h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* 🖼️ Portfolio Grid - Desktop */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* 🎨 Portfolio Items */
-.portfolio-item {
-    background: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
-}
-
-.portfolio-item img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* 🔗 Project Links */
-.project-link {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.project-link:hover {
-    background: #0056b3;
-}
-
-
-
-#projects {
-        text-align: center;
-        padding: 50px 0;
-    }
-
-
-#projects p {
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 20px;
-}
-
-.project-container {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        flex-wrap: wrap;
-
-    }
-
-    .project-item {
-        width: 300px;
-        text-align: center;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        background: #f9f9f9;
-    }
-
-    .project-item p {
-        font-family: 'Josefin Sans', sans-serif;
-        padding: 20px;
-    }
-
-
-    .project-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
-
-    .btn-1 {
-        display: inline-block;
-        padding: 10px 20px;
-        background:#007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background:#007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-
-/* Blog Section */
-.blog {
-    text-align: center;
-    padding: 250px;
-    color: #273B6D;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
-
-.blog {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.blog p {
-    color:#273B6D;
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 20px;
-}
-
-
-.blog-post {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    text-align: left;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.blog-post h3 {
-    font-size: 22px;
-}
-
-.blog-post p {
-    font-size: 16px;
-    color:#273B6D;
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 20px;
-    line-height: 1.8; /* 1.5 to 2 is usually good for readability */
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 10px;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-
-.project-link {
-    display: inline-block;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.project-link:hover {
-    background-color: #0056b3;
-}
-
-/* Podcast Section */
-.podcast {
-    text-align: center;
-    padding: 100px;
-    font-family: 'Copperplate', sans-serif;
-}
-
-.podcast h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #273B6D;
-}
-
-.podcast p {
-    color: #273B6D;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-.podcast iframe {
-    width: 100%;
-    max-width: 660px;
-    height: 450px;
-    margin: 20px auto;
-    display: block;
-    border-radius: 10px;
-}
-
-/* Contact Section */
-
-.contact {
-    text-align: center;
-    padding: 60px 20px;
-    color: #273B6D;
-}
-
-.contact p {
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 20px;
-}
-
-.contact-links {
-    list-style: none;
-    padding: 0;
-    font-size: 18px;
-}
-
-.contact-links li {
-    margin: 10px 0;
-}
-
-.contact-links a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-links a:hover {
-    text-decoration: underline;
-}
-
-.cta {
-    display: inline-block;
-    padding: 16px 24px; /* More padding for better visibility */
-    margin-top: 25px; /* More space above */
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.cta:hover {
-    background-color: #0056b3;
-}
-
-
-/* 🎯 Center the Newsletter Section */
-#newsletter {
-    text-align: center;
-    padding: 40px 20px;
-    font-family: "Josefin Sans", sans-serif;
-}
-
-/* 🔹 Style Header & Paragraph */
-#newsletter h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#newsletter p {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 20px;
-    font-family: "Josefin Sans", sans-serif;
-}
-
-/* 🎨 Adjust Form Paragraph & Fields */
-#newsletter p, 
-#newsletter label, 
-#newsletter input {
-    color: #5A8DEE !important; /* Lighter Blue */
-}
-
-/* 📝 Mailchimp Form Styling */
-#mc_embed_signup {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 0 auto; /* Center the form */
-}
-
-/* 📩 Form Input Fields */
-.mc-field-group input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: "Josefin Sans", sans-serif;
-}
-
-/* 🔘 Subscribe Button */
-#mc-embedded-subscribe {
-    background: #007bff;
-    color: white;
-    font-size: 1.2rem;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-family: "Josefin Sans", sans-serif;
-}
-
-#mc-embedded-subscribe:hover {
-    background: #0056b3;
-}
-
-/* 🖥 Make Sure It’s Responsive */
-@media (max-width: 768px) {
-    #newsletter {
-        padding: 30px 15px;
-    }
-
-    #mc_embed_signup {
-        max-width: 90%;
-    }
-
-    #mc-embedded-subscribe {
-        font-size: 1rem;
-        padding: 10px;
-    }
-}
-/* ✅ Ensure the Footer is Fixed */
-.footer-container {
-    text-align: center !important;
-    padding: 20px 0 !important;
-    width: 100% !important;
-}
-/* 💡 Adjust Footer Spacing */
-.footer-container {
-    padding-top: 20px; /* Moves the footer down */
-}
-
-/* 💡 Ensure Form is Above Footer */
-#mc_embed_signup {
-    margin-bottom: 50px;
-}
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #d9ebff;
-  padding: 20px;
-  border-top: 3px solid navy;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  display: inline;
-}
-
-.footer-links a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #001f3f;
-}
-
-.footer-credit {
-  font-size: 14px;
-  font-weight: bold;
-  color: #001f3f;
-}
-
-
-/* 📱 Mobile Responsive Styling */
-@media (max-width: 768px) {
-    /* 🔹 Fix Header Navigation Alignment */
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 5px;
-    }
-    
-    /* 📌 Mobile Navigation */
+/* 📌 Mobile Navigation */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
@@ -646,179 +84,106 @@ body {
     }
 }
 
-    /* 🔹 Fix Hero Section */
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .hero h1 {
-        font-size: 24px;
-    }
-
-    .hero img {
-        width: 80%;
-        max-width: 300px;
-    }
-
-    /* 🔹 Fix About Me Section Alignment */
-    .about {
-        padding: 40px 15px;
-        text-align: center;
-    }
-
-    .about p {
-        max-width: 90%;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
-   /* 📱 Mobile Responsive Portfolio */
-@media (max-width: 768px) {
-    .portfolio {
-        padding: 50px 10px;
-    }
-
-    .portfolio h2 {
-        font-size: 2rem;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: repeat(1, 1fr); /* Stack projects vertically */
-        gap: 20px;
-    }
-
-    .portfolio-item {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    .portfolio-item img {
-        max-height: 180px; /* Adjusted for mobile */
-    }
+/* 📌 Main Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
 }
 
-    /* 🔹 Fix My Creations Cards */
-    .creations-section {
-        padding: 20px;
-    }
-
-    .creations-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    /* 🔹 Fix Blog Section */
-    .blog {
-        text-align: center;
-        padding: 60px 20px;
-    }
-
-    .blog p {
-        font-family: 'Josefin Sans', sans-serif;
-        padding: 10px;
-        line-height: 1.6;
-    }
-
-    .blog-post {
-        max-width: 90%;
-        margin: 20px auto;
-    }
-
-    /* 🔹 Fix Podcast Section */
-    .podcast {
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    .podcast iframe {
-        width: 90%;
-        max-width: 400px;
-        height: auto;
-    }
-
-    /* 🔹 Fix Let’s Chat CTA Button */
-    .cta-button {
-        display: block;
-        width: 90%;
-        max-width: 200px;
-        margin: 10px auto;
-        text-align: center;
-    }
-
-    /* 🔹 Fix Contact Section */
-    .contact {
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .contact-links {
-        font-size: 16px;
-    }
-
-/* 📱 Responsive Design */
-@media (max-width: 768px) {
-    #mc_embed_signup {
-        width: 90%;
-        padding: 15px;
-    }
-
-    #mc_embed_signup h2 {
-        font-size: 22px;
-    }
-
-    .mc-field-group input {
-        max-width: 100%;
-    }
-
-    #mc-embedded-subscribe {
-        width: 100%;
-    }
+/* 🔹 Headings */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
-    /* 🔹 Fix Footer */
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-text {
-        font-size: 12px;
-        margin-top: 10px;
-    }
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-/* 📱 Extra Small Screens (Phones) */
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 20px;
-    }
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
-    .cta-button {
-        font-size: 12px;
-    }
+/* 📩 Input Fields */
+input, textarea {
+    font-size: 1rem;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+}
 
-    .footer-links {
-        flex-direction: column;
-        gap: 8px;
-    }
+/* 🔘 Buttons */
+button, .button {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
 
-    .footer-text {
-        font-size: 10px;
-    }
-} /* <-- ✅ Closing bracket was missing, now fixed */
+button:hover, .button:hover {
+    background: #0056b3;
+}
 
-/* 🔹 Prevent Horizontal Scrolling (Fix for Side-to-Side Movement) */
-html, body {
-    overflow-x: hidden;
-    max-width: 100%;
+/* 📩 Newsletter Section */
+#newsletter {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#newsletter h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#newsletter p {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 20px;
+}
+
+/* 📩 Mailchimp Form */
+#mc_embed_signup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* 🔹 Form Fields */
+.mc-field-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.mc-field-group label {
+    font-weight: bold;
+}
+
+#mc-embedded-subscribe {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+/* 📌 Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    font-size: 14px;
 }
