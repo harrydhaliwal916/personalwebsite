@@ -401,12 +401,14 @@ body {
 /* 🔹 Mailchimp Form Styling */
 #mc_embed_signup {
     background: #f9f9f9;
+    font-family: 'Josefin Sans', sans-serif;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     margin: 0 auto;
+    
 }
 
 #mc_embed_signup h3 {
