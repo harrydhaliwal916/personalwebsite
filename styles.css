@@ -398,22 +398,23 @@ body {
     background-color: #0056b3;
 }
 
-/* 📌 Center Form & Fix Spacing */
+/* 📌 Centering & Styling the Newsletter Section */
 #mc_embed_signup {
     background: #fff;
     width: 100%;
     max-width: 500px;
     margin: 30px auto; /* Centers the form */
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    font-family: 'Josefin Sans', sans-serif; /* Apply Josefin Sans */
 }
 
-/* 📝 Center Title & Description */
+/* 📝 Centering Header & Paragraph */
 #mc_embed_signup h2 {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
@@ -440,19 +441,23 @@ body {
     font-weight: bold;
     text-align: left;
     width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 5px;
 }
 
+/* 🖋️ Input Box Styling */
 .mc-field-group input {
     width: 100%;
     max-width: 400px;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif; /* Apply Josefin Sans */
+    text-align: left;
 }
 
-/* 🔘 Centering the Subscribe Button */
+/* 🔘 Centering & Styling the Subscribe Button */
 .clear.foot {
     text-align: center;
     margin-top: 15px;
