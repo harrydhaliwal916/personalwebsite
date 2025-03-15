@@ -39,6 +39,21 @@ body {
     color: #001f3f;
   }
   
+  /* 📌 Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+}
   /* MEDIUM LOGO */
   .medium-logo {
     width: 25px;
@@ -544,6 +559,29 @@ body {
         display: block;
         padding: 5px;
     }
+    
+    /* 📌 Mobile Navigation */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
 
     /* 🔹 Fix Hero Section */
     .hero {
