@@ -5,12 +5,13 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
     font-family: Copperplate, "Josefin Sans", sans-serif;
     font-size: 16px;
     color: #333;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
     background-color: #f9f9f9;
 }
 
@@ -19,7 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
     background: white;
     position: fixed;
     width: 100%;
@@ -27,6 +28,14 @@ body {
     left: 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+}
+
+/* 📌 Navigation Links */
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .nav-links {
@@ -37,81 +46,65 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #007bff;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-    color: #007bff;
+    color: #0056b3;
 }
 
-/* 📌 Hamburger Menu */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1100;
-}
-
-.hamburger-menu .bar {
+/* 📌 Medium Logo in Header */
+.medium-logo {
     width: 30px;
-    height: 3px;
-    background: #333;
-    margin: 5px 0;
-    transition: 0.3s;
+    height: auto;
 }
 
-/* 📌 Mobile Navigation */
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
+/* 📌 Let’s Chat CTA */
+.lets-chat {
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
-/* 📌 Hero Section */
+.lets-chat:hover {
+    background: #0056b3;
+}
+
+/* 📌 Fix Hero Section */
 .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 100px 20px;
-    text-align: center;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 150px 10%;
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 50%;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 3rem;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
 }
 
-/* 📌 Portfolio Section */
-.portfolio {
-    padding: 80px 20px;
+/* 📌 Fix About Me Text Centering */
+.about {
     text-align: center;
+    padding: 80px 20px;
 }
 
+/* 📌 Fix Portfolio Grid */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -120,25 +113,13 @@ body {
 }
 
 .portfolio-item {
-    background: #ffffff;
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
 }
 
-.portfolio-item:hover {
-    transform: translateY(-5px);
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-/* 📌 Product Cards (Pangean Wear & My Book) */
+/* 📌 Fix Product Cards on Mobile */
 .project-container {
     display: flex;
     flex-wrap: wrap;
@@ -148,44 +129,41 @@ body {
 }
 
 .project-item {
-    width: 350px;
-    background: #ffffff;
+    width: 320px;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    transition: transform 0.3s ease-in-out;
 }
 
-.project-item:hover {
-    transform: translateY(-5px);
+/* 📌 Center Spotify & Apple Podcast */
+.podcast iframe {
+    display: block;
+    margin: 20px auto;
 }
 
-.project-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
+/* 📌 Fix Contact Form Styling */
+.contact {
+    text-align: center;
+    padding: 60px 20px;
 }
 
-/* 📌 Buttons */
-.btn-1, .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background: #007bff;
-    border-radius: 5px;
+.contact-links {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-links li {
+    margin-bottom: 10px;
+}
+
+.contact-links a {
     text-decoration: none;
-    transition: background 0.3s ease-in-out;
+    color: #007bff;
+    font-weight: bold;
 }
 
-.btn-1:hover, .btn:hover {
-    background: #0056b3;
-}
-
-/* 📌 Footer */
+/* 📌 Fix Footer */
 .footer {
     text-align: center;
     padding: 20px;
@@ -193,19 +171,36 @@ body {
     font-size: 14px;
 }
 
-/* 📌 Responsive Media Queries */
-/* Tablets & Small Laptops (Up to 1024px) */
+.footer .medium-logo {
+    width: 25px;
+}
+
+/* 📌 Add Hamburger Menu in Footer */
+.footer-hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.footer-hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+}
+
+/* 📌 Responsive Fixes */
 @media (max-width: 1024px) {
-    .header {
-        padding: 15px;
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 20px;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-image img {
-        width: 80%;
+    .hero-content {
+        max-width: 100%;
     }
 
     .portfolio-grid {
@@ -213,75 +208,27 @@ body {
     }
 }
 
-/* Mobile-Friendly Fixes (Up to 768px) */
 @media (max-width: 768px) {
-    .hamburger-menu {
-        display: flex;
-    }
-
     .nav-links {
         display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 10px;
     }
 
     .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 300px;
+        font-size: 2.5rem;
     }
 
     .portfolio-grid {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .project-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .project-item {
         width: 90%;
     }
-
-    .footer-links {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
 }
 
-/* Ultra-Small Screens (Up to 480px) */
 @media (max-width: 480px) {
-    .header {
-        padding: 10px;
-    }
-
     .hero-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero-image img {
-        max-width: 250px;
+        font-size: 2rem;
     }
 
     .portfolio-item img {
@@ -291,11 +238,6 @@ body {
     .project-item {
         width: 100%;
         padding: 15px;
-    }
-
-    .btn-1, .btn {
-        font-size: 0.9rem;
-        padding: 8px 15px;
     }
 
     .footer {
