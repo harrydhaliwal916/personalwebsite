@@ -398,12 +398,6 @@ body {
     background-color: #0056b3;
 }
 
-.newsletter h2, p {
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 24px;
-    color: #273B6D;
-    font-weight: bold;
 
 /* 💡 Center and Fix Newsletter Section */
 #mc_embed_signup {
