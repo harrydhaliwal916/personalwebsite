@@ -151,18 +151,22 @@ p {
 /* 📌 Portfolio Section */
 .portfolio {
     text-align: center;
-    padding-bottom: 40px;
+    padding: 100px 20px;
 }
 
+/* ✅ Add Padding Between "Latest Works" Header & Projects */
+.portfolio h2 {
+    margin-bottom: 40px;
+}
+
+/* ✅ Adjust Grid Layout for Desktop */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* Added better spacing */
     justify-content: center;
-    max-width: 750px;
-    margin: auto;
+    align-items: start;
 }
-
 /* 📌 Reduce Image Sizes in Portfolio */
 .portfolio-item img {
     width: 100%;
@@ -383,6 +387,56 @@ p {
     vertical-align: middle;
 }
 
+/* ✅ Fix Header Hamburger Menu Overlapping Issue */
+@media (max-width: 1280px) { /* Adjusts for both desktop & mobile */
+    .hamburger-menu {
+        position: relative;
+        z-index: 1002; /* Ensures it's above the hero but doesn't overlap */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100px; /* Moves menu lower */
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        padding: 15px;
+        z-index: 1001; /* Ensures it's below the menu button */
+    }
+
+    .nav-links.active {
+        display: flex; /* Only appears when clicked */
+        top: 120px; /* Ensures it doesn't overlap hero copy */
+    }
+
+    .hero {
+        padding-top: 160px; /* Pushes hero down further */
+    }
+}
+
+/* ✅ Ensure Proper Layering for Large Screens */
+@media (min-width: 1281px) {
+    .hamburger-menu {
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 110px;
+    }
+
+    .hero {
+        padding-top: 180px; /* Extra space to prevent overlap */
+    }
+}
+
+
+
+
 /* 📌 Responsive Styles (Tablets & Mobile) */
 @media (max-width: 1024px) {
     /* ✅ Mobile Navigation */
@@ -436,10 +490,11 @@ p {
         height: auto;
     }
 
-    /* ✅ Portfolio: List Projects Vertically on Mobile */
+  /* ✅ Adjust for Mobile: List in a Vertical Row */
+@media (max-width: 1024px) {
     .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr; /* Single column for better spacing */
+        gap: 30px; /* Better vertical spacing */
     }
 
     .portfolio-item {
