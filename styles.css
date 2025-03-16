@@ -123,15 +123,15 @@ p {
     max-height: 100vh; /* Prevents Fedora from getting cut */
 }
 
-/* 📌 Scroll Down Positioning */
 .scroll-down {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 50px;
+    display: inline-block;
     font-family: "Josefin Sans", sans-serif;
     color: #273B6D;
-    cursor: pointer;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .scroll-down:hover {
@@ -387,6 +387,7 @@ p {
     display: flex;
 }
 
+/* 📌 Responsive Styles (Tablets & Mobile) */
 @media (max-width: 1024px) {
     /* ✅ Adjust Hero Section for Mobile */
     .hero {
@@ -405,21 +406,38 @@ p {
         font-size: 4rem;
     }
 
+    .scroll-down {
+        margin-top: 30px;
+        font-size: 1.2rem;
+        text-align: center;
+        display: block;
+    }
+
     .hero-image img {
         width: 100%;
         max-width: 500px;
         height: auto;
     }
 
-    /* ✅ Scroll Down Mobile Positioning */
-    .scroll-down {
-        margin-top: 30px;
-        font-size: 1.2rem;
+    /* ✅ Fix Footer Menu for Mobile */
+    .footer-menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        bottom: -120px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-}
 
+    .footer-menu.active {
+        display: flex;
+    }
 
-    /* ✅ Podcast Section */
+    /* ✅ Adjust Podcast Section */
     .podcast {
         padding: 60px 20px;
     }
@@ -433,7 +451,7 @@ p {
         height: 380px;
     }
 
-    /* ✅ My Creations Section */
+    /* ✅ Adjust My Creations Section */
     .project-container {
         flex-direction: column;
         align-items: center;
@@ -459,29 +477,42 @@ p {
         padding: 12px;
     }
 
-    /* ✅ Fix Header & Footer Navigation for Mobile */
-    .nav-links,
-    .footer-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* ✅ Prevent Fedora from Being Cut */
+    .hero-image img {
+        max-height: 80vh;
+        object-fit: contain;
+    }
+}
+
+/* 📌 Small Mobile Screens (iPhones, etc.) */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
     }
 
-    .nav-links.active,
-    .footer-menu.active {
-        display: flex;
+    .scroll-down {
+        font-size: 1rem;
     }
 
-    /* ✅ Fix Footer Navigation Opening Direction */
+    .hero-image img {
+        max-width: 400px;
+    }
+
+    .podcast iframe {
+        height: 320px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+    }
+
     .footer-menu {
-        top: auto;
-        bottom: 60px;
+        bottom: -150px;
     }
 }
 
