@@ -390,105 +390,39 @@ p {
     vertical-align: middle;
 }
 
-/* ✅ Mobile Navigation */
+/* 📌 📱 MOBILE & TABLET STYLES (Up to 1024px) */
 @media (max-width: 1024px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        padding: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
-
-/* ✅ Desktop Navigation */
-@media (min-width: 1025px) {
+    /* ✅ Fix Mobile Menu */
     .hamburger-menu {
-        display: flex !important; /* Forces visibility */
+        display: flex;
         position: absolute;
-        top: 10px;
+        top: 20px;
         right: 20px;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 90px;
-        left: 0;
-        width: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 1001;
-    }
-
-    .nav-links.active {
-        display: flex;
-        top: 100px; /* Moves menu below header */
-    }
-}
-
-    .hero {
-        padding-top: 160px; /* Pushes hero down further */
-    }
-}
-
-/* ✅ Ensure Proper Layering for Large Screens */
-@media (min-width: 1281px) {
-    .hamburger-menu {
-        position: relative;
         z-index: 1002;
     }
 
     .nav-links {
         position: absolute;
-        top: 110px;
-    }
-
-    .hero {
-        padding-top: 180px; /* Extra space to prevent overlap */
-    }
-}
-
-
-
-
-/* 📌 Responsive Styles (Tablets & Mobile) */
-@media (max-width: 1024px) {
-    /* ✅ Mobile Navigation */
-    .hamburger-menu {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
         width: 100%;
-        padding: 10px;
+        background: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+        padding: 15px;
+        z-index: 1001;
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    /* ✅ Adjust Hero Section for Mobile */
+    /* ✅ Hero Section Adjustments */
     .hero {
         flex-direction: column;
         height: auto;
-        padding: 60px 20px;
+        padding: 80px 20px;
         text-align: center;
     }
 
@@ -514,11 +448,10 @@ p {
         height: auto;
     }
 
-  /* ✅ Adjust for Mobile: List in a Vertical Row */
-@media (max-width: 1024px) {
+    /* ✅ Portfolio: Display Projects in a Vertical Row */
     .portfolio-grid {
         grid-template-columns: 1fr; /* Single column for better spacing */
-        gap: 30px; /* Better vertical spacing */
+        gap: 30px;
     }
 
     .portfolio-item {
@@ -531,23 +464,7 @@ p {
         height: auto;
     }
 
-    /* ✅ Footer Adjustments for Mobile */
-    .footer-container {
-        padding: 20px 10px;
-        text-align: center;
-    }
-
-    .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .footer-links a {
-        font-size: 0.9rem;
-    }
-
-    /* ✅ Adjust Podcast Section */
+    /* ✅ Podcast Section */
     .podcast {
         padding: 60px 20px;
     }
@@ -594,7 +511,55 @@ p {
     }
 }
 
-/* 📌 Small Mobile Screens (iPhones, etc.) */
+/* 📌 🖥️ DESKTOP STYLES (1025px and Above) */
+@media (min-width: 1025px) {
+    /* ✅ Ensure Desktop Navigation Works */
+    .hamburger-menu {
+        display: none; /* Hides hamburger menu */
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        top: 0;
+        background: none;
+        box-shadow: none;
+        flex-direction: row;
+        gap: 20px;
+        z-index: 1001;
+    }
+
+    /* ✅ Adjust Hero Section */
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero-content h1 {
+        font-size: 6rem;
+    }
+
+    /* ✅ Ensure Fedora Doesn't Get Cut */
+    .hero-image img {
+        max-height: 85vh;
+        object-fit: contain;
+    }
+
+    /* ✅ Portfolio Section */
+    .portfolio {
+        padding: 100px;
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        justify-content: center;
+    }
+}
+
+/* 📌 📱 Small Mobile Screens (iPhones, etc.) */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 3rem;
@@ -626,5 +591,3 @@ p {
         gap: 5px;
     }
 }
-
-
