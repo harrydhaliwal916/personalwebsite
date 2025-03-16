@@ -6,14 +6,22 @@
     overflow-x: hidden; /* Fixes side scrolling */
 }
 
+/* 📌 Global Text Styling */
 body {
     font-family: Copperplate, "Josefin Sans", sans-serif;
     font-size: 16px;
-    color: #333;
+    color: #273B6D; /* Sets all text to your brand color */
     line-height: 1.6;
     background-color: #f9f9f9;
     width: 100%;
 }
+
+/* ✅ Paragraphs: Always Josefin Sans */
+p {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2rem;
+}
+
 
 /* 📌 Fix Header */
 .header {
@@ -77,15 +85,17 @@ body {
     margin-left: 10px;
 }
 
-/* 📌 Hero Section */
+/* 📌 Fix Hero Section */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
     padding: 100px;
+    position: relative;
 }
 
+/* 📌 Fix Hero Content */
 .hero-content {
     flex: 1;
     max-width: 50%;
@@ -98,29 +108,34 @@ body {
     color: #273B6D;
 }
 
-.wave {
-    font-size: 8rem;
-}
-
-.scroll-down {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 50px;
-    text-align: left;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #273B6D;
-}
-
-/* 📌 Hero Image */
+/* 📌 Fix Hero Image Positioning */
 .hero-image {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .hero-image img {
     width: 800px;
     height: auto;
+    object-fit: contain;
+    max-height: 100vh; /* Prevents Fedora from getting cut */
+}
+
+/* 📌 Scroll Down Positioning */
+.scroll-down {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #273B6D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.scroll-down:hover {
+    color: #0056b3;
 }
 
 
@@ -345,12 +360,13 @@ body {
 
 
 
-/* 📌 Fix Footer */
+/* 📌 Fix Footer Menu */
 .footer-container {
     text-align: center;
     padding: 20px;
     background: white;
     border-top: 3px solid navy;
+    position: relative;
 }
 
 /* 📌 Footer Menu Opens Downward */
@@ -359,9 +375,10 @@ body {
     flex-direction: column;
     background: white;
     position: absolute;
-    bottom: 60px;
-    left: 0;
-    width: 100%;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -370,9 +387,8 @@ body {
     display: flex;
 }
 
-/* 📌 Responsive Styles (Tablets & Mobile) */
 @media (max-width: 1024px) {
-    /* ✅ Adjust Hero Section */
+    /* ✅ Adjust Hero Section for Mobile */
     .hero {
         flex-direction: column;
         height: auto;
@@ -395,12 +411,13 @@ body {
         height: auto;
     }
 
-    /* ✅ Adjust Scroll Down */
+    /* ✅ Scroll Down Mobile Positioning */
     .scroll-down {
         margin-top: 30px;
-        text-align: center;
         font-size: 1.2rem;
     }
+}
+
 
     /* ✅ Podcast Section */
     .podcast {
