@@ -393,34 +393,32 @@ p {
 /* 📌 Enable Hamburger Menu on Desktop */
 @media (min-width: 1025px) {
     .hamburger-menu {
-        display: flex !important; /* Forces it to be visible */
+        display: flex !important; /* Forces visibility */
         position: absolute;
         top: 20px;
         right: 30px;
         cursor: pointer;
-        z-index: 1002; /* Ensures it stays on top */
+        z-index: 1002; /* Ensures it's clickable */
     }
 
     .nav-links {
+        display: none; /* Hide full menu initially */
+        flex-direction: column;
+        background: white;
         position: absolute;
         top: 70px;
         left: 0;
         width: 100%;
-        background: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: none;
-        flex-direction: column;
         padding: 15px;
         text-align: center;
         z-index: 1001;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Show when active */
     }
 }
-
-
 
 /* 📌 Ensure Mobile Menu Doesn't Overlap Hero */
 @media (max-width: 1024px) {
@@ -541,22 +539,32 @@ p {
 
 /* 📌 🖥️ Desktop Styles (1025px and Above) */
 @media (min-width: 1025px) {
-    /* ✅ Hide Hamburger Menu */
+    /* ✅ Hide Full Nav & Enable Hamburger */
     .hamburger-menu {
-        display: none;
+        display: flex !important; /* Ensures hamburger is always visible */
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        cursor: pointer;
+        z-index: 1002; /* Ensures it's clickable */
     }
 
     .nav-links {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        position: relative;
-        top: 0;
-        background: none;
-        box-shadow: none;
-        flex-direction: row;
-        gap: 20px;
+        display: none; /* Hide full menu initially */
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        text-align: center;
         z-index: 1001;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     /* ✅ Adjust Hero Section */
@@ -619,3 +627,4 @@ p {
         gap: 5px;
     }
 }
+
