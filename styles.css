@@ -387,30 +387,49 @@ p {
     vertical-align: middle;
 }
 
-/* ✅ Fix Header Hamburger Menu Overlapping Issue */
-@media (max-width: 1280px) { /* Adjusts for both desktop & mobile */
+/* 📌 Responsive Styles (Tablets & Mobile) */
+@media (max-width: 1024px) {
+    /* ✅ Fix Mobile Menu Overlapping Hero */
+    .nav-links {
+        position: absolute;
+        top: 80px; /* Lowers menu to prevent overlap */
+        z-index: 1001;
+    }
+
+    .hero {
+        padding-top: 150px; /* Pushes hero section down */
+    }
+
     .hamburger-menu {
-        position: relative;
-        z-index: 1002; /* Ensures it's above the hero but doesn't overlap */
+        z-index: 1002;
+    }
+}
+
+/* ✅ Ensure Hamburger Menu is Visible on Desktop */
+@media (min-width: 1025px) {
+    .hamburger-menu {
+        display: flex !important; /* Forces it to appear */
+        cursor: pointer;
     }
 
     .nav-links {
         position: absolute;
-        top: 100px; /* Moves menu lower */
+        top: 90px;
         left: 0;
         width: 100%;
         background: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: none; /* Hidden by default */
+        display: none;
         flex-direction: column;
         padding: 15px;
-        z-index: 1001; /* Ensures it's below the menu button */
+        z-index: 1001;
     }
 
     .nav-links.active {
-        display: flex; /* Only appears when clicked */
-        top: 120px; /* Ensures it doesn't overlap hero copy */
+        display: flex;
+        top: 100px; /* Moves menu below header */
     }
+}
 
     .hero {
         padding-top: 160px; /* Pushes hero down further */
