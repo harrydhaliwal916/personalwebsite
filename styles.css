@@ -390,6 +390,38 @@ p {
     vertical-align: middle;
 }
 
+/* 📌 Enable Hamburger Menu on Desktop */
+@media (min-width: 1025px) {
+    .hamburger-menu {
+        display: flex !important; /* Forces it to be visible */
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        cursor: pointer;
+        z-index: 1002; /* Ensures it stays on top */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+        z-index: 1001;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+
 /* 📌 Ensure Mobile Menu Doesn't Overlap Hero */
 @media (max-width: 1024px) {
     .nav-links {
