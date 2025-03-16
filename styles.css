@@ -360,31 +360,37 @@ p {
 
 
 
-/* 📌 Fix Footer Menu */
+/* 📌 Standard Footer */
 .footer-container {
     text-align: center;
     padding: 20px;
-    background: white;
+    background: #f0f4ff; /* Light blue background */
     border-top: 3px solid navy;
-    position: relative;
 }
 
-/* 📌 Footer Menu Opens Downward */
-.footer-menu {
-    display: none;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.footer-menu.active {
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
     display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #273B6D;
+}
+
+.medium-logo {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
 }
 
 /* 📌 Responsive Styles (Tablets & Mobile) */
@@ -419,22 +425,20 @@ p {
         height: auto;
     }
 
-    /* ✅ Fix Footer Menu for Mobile */
-    .footer-menu {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        bottom: -120px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto;
-        padding: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* ✅ Footer Adjustments for Mobile */
+    .footer-container {
+        padding: 20px 10px;
+        text-align: center;
     }
 
-    .footer-menu.active {
-        display: flex;
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
     }
 
     /* ✅ Adjust Podcast Section */
@@ -511,8 +515,9 @@ p {
         font-size: 1rem;
     }
 
-    .footer-menu {
-        bottom: -150px;
+    .footer-links {
+        flex-direction: column;
+        gap: 5px;
     }
 }
 
