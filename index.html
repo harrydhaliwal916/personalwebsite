@@ -30,17 +30,16 @@
     </nav>
 </header>
 
-    
     <!-- HERO SECTION -->
     <section class="hero">
-        <div class="hero-content">
-            <h1> 👋 I'm Harry, an aspiring <br> Front-End Web Developer <br> and Designer.</h1>
-            <p class="scroll-down">Scroll Down ⬇️</p>
-        </div>
-        <div class="hero-image">
-            <img src="./harry_portfolio_image.png" alt="Harry Dhaliwal">
-        </div>
-    </section>
+    <div class="hero-content">
+        <h1>👋 I'm Harry, an aspiring <br> Front-End Web Developer <br> and Designer.</h1>
+        <a href="#projects" class="scroll-down">Scroll Down ⬇️</a>
+    </div>
+    <div class="hero-image">
+        <img src="./harry_portfolio_image.png" alt="Harry Dhaliwal">
+    </div>
+</section>
 
     <!-- ABOUT ME -->
     <section id="about" class="about">
@@ -224,8 +223,7 @@
 
 document.querySelector(".scroll-down").addEventListener("click", function() {
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-});
-
+});  
 </script>
 
 </body>
