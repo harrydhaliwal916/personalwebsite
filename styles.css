@@ -294,37 +294,77 @@ body {
     display: flex;
 }
 
-/* 📌 Responsive Fixes */
+/* 📌 Mobile Styles (Up to 768px) */
 @media (max-width: 768px) {
+    
+    /* ✅ Fix Header Layout */
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* ✅ Fix Hero Section */
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 100px 20px;
+        padding: 80px 20px;
+    }
+
+    .hero-content {
+        padding: 0;
     }
 
     .hero-content h1 {
-        font-size: 4.5rem;
+        font-size: 4rem; /* Reduce size for mobile */
     }
 
     .hero-image img {
-        max-width: 420px;
+        max-width: 300px;
     }
 
+    /* ✅ Scroll Down Text (Keep it Below Hero Copy) */
+    .scroll-down {
+        display: block;
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+    /* ✅ Fix Portfolio Grid */
     .portfolio-grid {
         grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 3.8rem;
+        gap: 10px;
     }
 
-    .hero-image img {
-        max-width: 350px;
+    /* ✅ Reduce Product Card Size for Mobile */
+    .project-container {
+        flex-direction: column;
+        align-items: center;
     }
 
+    .project-item {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    /* ✅ Fix Contact Form & Newsletter */
+    #contact-form-section {
+        padding: 20px;
+    }
+
+    .contact-form {
+        max-width: 90%;
+    }
+
+    /* ✅ Fix Podcast Players (Spotify & Apple) */
     .podcast iframe {
         width: 100%;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    /* ✅ Fix Footer Menu */
+    .footer-menu {
+        text-align: center;
+        padding-top: 10px;
     }
 }
