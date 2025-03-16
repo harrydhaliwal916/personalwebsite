@@ -206,30 +206,32 @@
 
 
 <script>
-<script>
-// 🍔 Toggle Navigation Menu
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger-menu");
     const navLinks = document.querySelector(".nav-links");
 
-    if (hamburger && navLinks) { // ✅ Ensures elements exist before running
+    if (hamburger && navLinks) {
         hamburger.addEventListener("click", function () {
             navLinks.classList.toggle("active");
         });
     }
 
-    // ✅ Smooth Scroll for "Scroll Down" Button (Only If It Exists)
+    // ✅ Fix Auto-Scrolling Issue (Only Scroll When Clicked)
     const scrollDown = document.querySelector(".scroll-down");
-    const projectsSection = document.getElementById("projects");
+    const portfolioSection = document.getElementById("portfolio");
 
-    if (scrollDown && projectsSection) {
-        scrollDown.addEventListener("click", function () {
-            projectsSection.scrollIntoView({ behavior: "smooth" });
+    if (scrollDown && portfolioSection) {
+        scrollDown.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevents any default link behavior
+            portfolioSection.scrollIntoView({ behavior: "smooth" });
         });
     }
-});
-</script>
 
+    // ✅ Ensure Page Doesn't Auto-Scroll on Load
+    if (window.location.hash === "#portfolio") {
+        history.replaceState(null, null, " "); // Removes the hash to prevent auto-scrolling
+    }
+});
 </script>
 
 </body>
