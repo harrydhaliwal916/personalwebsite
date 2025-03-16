@@ -177,13 +177,13 @@ body {
 }
 
 .project-item {
-    width: 240px;
+    width: 250px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 15px;
-    border: 2px solid #007bff; /* Blue Border */
+    border: 2px solid #007bff; /* Blue CTA Border */
 }
 
 /* 📌 Center Blog, Podcast & Contact Sections */
