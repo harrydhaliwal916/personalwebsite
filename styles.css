@@ -23,14 +23,17 @@ p {
 }
 
 
-/* 📌 Hamburger Menu (Desktop & Mobile) */
+/* ✅ Ensure Hamburger Menu is Visible on Desktop */
 .hamburger-menu {
-    display: none;
+    display: flex; /* Always visible */
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
+    position: relative;
+    z-index: 1002;
 }
 
+/* Hamburger Menu Bars */
 .hamburger-menu .bar {
     width: 30px;
     height: 3px;
@@ -387,41 +390,43 @@ p {
     vertical-align: middle;
 }
 
-/* 📌 Responsive Styles (Tablets & Mobile) */
+/* ✅ Mobile Navigation */
 @media (max-width: 1024px) {
-    /* ✅ Fix Mobile Menu Overlapping Hero */
     .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
         position: absolute;
-        top: 80px; /* Lowers menu to prevent overlap */
-        z-index: 1001;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .hero {
-        padding-top: 150px; /* Pushes hero section down */
-    }
-
-    .hamburger-menu {
-        z-index: 1002;
+    .nav-links.active {
+        display: flex;
     }
 }
 
-/* ✅ Ensure Hamburger Menu is Visible on Desktop */
+/* ✅ Desktop Navigation */
 @media (min-width: 1025px) {
     .hamburger-menu {
-        display: flex !important; /* Forces it to appear */
-        cursor: pointer;
+        display: flex !important; /* Forces visibility */
+        position: absolute;
+        top: 10px;
+        right: 20px;
     }
 
     .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
         position: absolute;
         top: 90px;
         left: 0;
         width: 100%;
-        background: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: none;
-        flex-direction: column;
-        padding: 15px;
         z-index: 1001;
     }
 
