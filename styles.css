@@ -23,34 +23,24 @@ p {
 }
 
 
-/* 📌 Fix Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: white;
-    width: 100%;
-    border-bottom: 3px solid navy;
-}
-
-/* 📌 Hamburger Menu (Header & Footer) */
-.hamburger-menu, .footer-hamburger {
-    display: flex;
+/* 📌 Hamburger Menu (Desktop & Mobile) */
+.hamburger-menu {
+    display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
 }
 
-.hamburger-menu .bar, .footer-hamburger .bar {
+.hamburger-menu .bar {
     width: 30px;
     height: 3px;
-    background: #333;
+    background: #273B6D;
     margin: 5px 0;
+    transition: 0.3s;
 }
 
 /* 📌 Navigation Inside Hamburger */
-.nav-links, .footer-menu {
+.nav-links {
     display: none;
     flex-direction: column;
     background: white;
@@ -62,7 +52,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.nav-links.active, .footer-menu.active {
+.nav-links.active {
     display: flex;
 }
 
@@ -395,6 +385,27 @@ p {
 
 /* 📌 Responsive Styles (Tablets & Mobile) */
 @media (max-width: 1024px) {
+    /* ✅ Mobile Navigation */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
     /* ✅ Adjust Hero Section for Mobile */
     .hero {
         flex-direction: column;
@@ -422,6 +433,22 @@ p {
     .hero-image img {
         width: 100%;
         max-width: 500px;
+        height: auto;
+    }
+
+    /* ✅ Portfolio: List Projects Vertically on Mobile */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .portfolio-item {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .portfolio-item img {
+        width: 100%;
         height: auto;
     }
 
@@ -520,4 +547,5 @@ p {
         gap: 5px;
     }
 }
+
 
