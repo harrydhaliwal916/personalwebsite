@@ -13,29 +13,23 @@
 
 <header class="header">
     <nav class="nav-container">
-        <!-- 🍔 Hamburger Menu (Desktop & Mobile) -->
         <div class="hamburger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-
-        <!-- 📌 Navigation Links -->
         <ul class="nav-links">
             <li><a href="#about">About Me</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#podcast">Podcast</a></li>
-            <li><a href="#pangean-wear">Pangean Wear</a></li>
+            <li><a href="#projects">Pangean Wear</a></li>
+            <li><a href="#contact-form-section" class="lets-chat">Let’s Chat ↗️</a></li>
+            <li><a href="https://medium.com/@harrysdhaliwal" target="_blank"><img src="./medium-logo.svg" alt="Medium" class="medium-logo"></a></li>
         </ul>
-
-        <!-- 📌 "Let’s Chat ↗️" CTA & Medium Logo -->
-        <a href="#contact" class="lets-chat">Let’s Chat ↗️</a>
-        <a href="https://medium.com/@harrysdhaliwal" target="_blank">
-            <img src="./Medium-Icon-Black.svg" alt="Medium" class="medium-logo">
-        </a>
     </nav>
 </header>
+
     
     <!-- HERO SECTION -->
     <section class="hero">
@@ -193,27 +187,20 @@
 
 <footer>
     <div class="footer-container">
-        <ul class="footer-links">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#podcast">Podcast</a></li>
-            <li><a href="#projects">Pangean Wear</a></li>
-            <li><a href="#projects">My Book</a></li>
-            <li>
-                <a href="https://medium.com/@harrysdhaliwal" target="_blank">
-                    <img src="./Medium-Icon-Black.svg" alt="Medium" class="medium-logo">
-                </a>
-            </li>
-        </ul>
-
-        <!-- 🍔 Footer Hamburger Menu -->
         <div class="footer-hamburger">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-
+        <ul class="footer-menu">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#podcast">Podcast</a></li>
+            <li><a href="#projects">Pangean Wear</a></li>
+            <li><a href="#contact-form-section" class="lets-chat">Let’s Chat ↗️</a></li>
+            <li><a href="https://medium.com/@harrysdhaliwal" target="_blank"><img src="./medium-logo.svg" alt="Medium" class="medium-logo"></a></li>
+        </ul>
         <p>© 2025 Harry Dhaliwal</p>
     </div>
 </footer>
@@ -235,6 +222,9 @@
     });
 });
 
+document.querySelector(".scroll-down").addEventListener("click", function() {
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+});
 </script>
 
 </body>
