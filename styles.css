@@ -1,9 +1,9 @@
-/* 📌 Reset & General Styles */
+/* 📌 Hide Horizontal Scrolling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /* Stops horizontal scrolling */
+    overflow-x: hidden; /* Fixes side scrolling */
 }
 
 body {
@@ -13,7 +13,6 @@ body {
     line-height: 1.6;
     background-color: #f9f9f9;
     width: 100%;
-    overflow-x: hidden;
 }
 
 /* 📌 Header */
@@ -78,12 +77,12 @@ body {
     margin-left: 10px;
 }
 
-/* 📌 Hero Section */
+/* 📌 Fix Hero Section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 20px 20px; /* Fedora now touches the header */
+    padding: 100px 20px 20px;
     text-align: left;
 }
 
@@ -99,16 +98,22 @@ body {
     padding: 20px;
 }
 
-/* 📌 Hero Image */
-.hero-image img {
-    width: 100%;
-    max-width: 700px;
-}
-
-/* 📌 Scroll Down Text */
+/* 📌 Scroll Down Text (Now Clickable) */
 .scroll-down {
     font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
 }
+
+.scroll-down:hover {
+    color: #0056b3;
+}
+
 
 /* 📌 About Me Section */
 .about {
