@@ -230,13 +230,7 @@ body {
     font-family: "Josefin Sans", sans-serif;
 }
 
-/* 📌 Newsletter Form FULLY STYLED */
-.newsletter {
-    text-align: center;
-    font-family: "Josefin Sans", sans-serif;
-}
-
-.newsletter form {
+.contact-form {
     max-width: 500px;
     margin: auto;
     background: white;
@@ -246,6 +240,40 @@ body {
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
 }
+
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 5px;
+}
+
+.contact-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+
+
 
 /* 📌 Footer */
 .footer {
