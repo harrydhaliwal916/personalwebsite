@@ -13,22 +13,27 @@
 
 <header class="header">
     <nav class="nav-container">
+        <!-- 🍔 Hamburger Menu (for mobile) -->
         <div class="hamburger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
+
+        <!-- 📌 Navigation Links -->
         <ul class="nav-links">
             <li><a href="#about">About Me</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#podcast">Podcast</a></li>
             <li><a href="#projects">Pangean Wear</a></li>
-            <li><a href="#contact-form-section">Contact</a></li>
+            <li><a href="#projects">My Book</a></li>
             <li><a href="https://medium.com/@harrysdhaliwal" target="_blank">Medium</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
+
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -201,13 +206,15 @@
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+   document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger-menu");
     const navLinks = document.querySelector(".nav-links");
 
     hamburger.addEventListener("click", function () {
         navLinks.classList.toggle("active");
     });
+});
+
 
 document.querySelector(".scroll-down").addEventListener("click", function() {
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
