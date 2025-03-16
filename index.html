@@ -206,20 +206,30 @@
 
 
 <script>
+<script>
 // 🍔 Toggle Navigation Menu
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger-menu");
     const navLinks = document.querySelector(".nav-links");
 
-    hamburger.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-    });
+    if (hamburger && navLinks) { // ✅ Ensures elements exist before running
+        hamburger.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    }
+
+    // ✅ Smooth Scroll for "Scroll Down" Button (Only If It Exists)
+    const scrollDown = document.querySelector(".scroll-down");
+    const projectsSection = document.getElementById("projects");
+
+    if (scrollDown && projectsSection) {
+        scrollDown.addEventListener("click", function () {
+            projectsSection.scrollIntoView({ behavior: "smooth" });
+        });
+    }
 });
+</script>
 
-
-document.querySelector(".scroll-down").addEventListener("click", function() {
-    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-});  
 </script>
 
 </body>
