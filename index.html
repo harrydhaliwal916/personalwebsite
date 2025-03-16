@@ -209,11 +209,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger-menu");
     const navLinks = document.querySelector(".nav-links");
-    const body = document.body;
 
-    hamburger.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-        body.classList.toggle("menu-open"); // Adds class when menu is open
+    // ✅ Toggle Hamburger Menu on Click
+    hamburger?.addEventListener("click", function () {
+        navLinks?.classList.toggle("active");
+        document.body.classList.toggle("menu-open"); // Prevents hero overlap
     });
 
     // ✅ Fix Auto-Scrolling Issue (Only Scroll When Clicked)
@@ -222,16 +222,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (scrollDown && portfolioSection) {
         scrollDown.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevents any default link behavior
-            portfolioSection.scrollIntoView({ behavior: "smooth" });
+            event.preventDefault(); // Stops default behavior
+            portfolioSection.scrollIntoView({ behavior: "smooth", block: "start" });
         });
     }
 
     // ✅ Ensure Page Doesn't Auto-Scroll on Load
-    if (window.location.hash === "#portfolio") {
-        history.replaceState(null, null, " "); // Removes the hash to prevent auto-scrolling
-    }
+    window.addEventListener("load", function () {
+        if (window.location.hash === "#portfolio") {
+            history.replaceState(null, null, " "); // Removes the hash from the URL
+        }
+    });
 });
+
 </script>
 
 </body>
