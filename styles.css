@@ -390,20 +390,11 @@ p {
     vertical-align: middle;
 }
 
-/* 📌 📱 MOBILE & TABLET STYLES (Up to 1024px) */
+/* 📌 Ensure Mobile Menu Doesn't Overlap Hero */
 @media (max-width: 1024px) {
-    /* ✅ Fix Mobile Menu */
-    .hamburger-menu {
-        display: flex;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 1002;
-    }
-
     .nav-links {
         position: absolute;
-        top: 80px;
+        top: 80px; /* Pushes menu lower */
         left: 0;
         width: 100%;
         background: white;
@@ -417,6 +408,13 @@ p {
     .nav-links.active {
         display: flex;
     }
+
+    /* ✅ Push Hero Down When Menu is Active */
+    body.menu-open .hero {
+        padding-top: 200px; /* Pushes hero lower only when menu is open */
+    }
+}
+
 
     /* ✅ Hero Section Adjustments */
     .hero {
