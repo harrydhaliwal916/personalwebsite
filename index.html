@@ -209,12 +209,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger-menu");
     const navLinks = document.querySelector(".nav-links");
+    const body = document.body;
 
-    if (hamburger && navLinks) {
-        hamburger.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-        });
-    }
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        body.classList.toggle("menu-open"); // Adds class when menu is open
+    });
 
     // ✅ Fix Auto-Scrolling Issue (Only Scroll When Clicked)
     const scrollDown = document.querySelector(".scroll-down");
