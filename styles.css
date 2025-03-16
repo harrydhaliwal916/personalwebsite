@@ -15,7 +15,7 @@ body {
     width: 100%;
 }
 
-/* 📌 Header */
+/* 📌 Fix Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@ body {
     padding: 20px;
     background: white;
     width: 100%;
-    border-bottom: 3px solid #007bff;
+    border-bottom: 3px solid navy;
 }
 
 /* 📌 Hamburger Menu (Header & Footer) */
@@ -77,41 +77,50 @@ body {
     margin-left: 10px;
 }
 
-/* 📌 Fix Hero Section */
+/* 📌 Hero Section */
 .hero {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 100px 20px 20px;
-    text-align: left;
+    align-items: center;
+    height: 100vh;
+    padding: 100px;
 }
 
 .hero-content {
     flex: 1;
-    padding-right: 40px;
+    max-width: 50%;
+    text-align: left;
 }
 
 .hero-content h1 {
-    font-size: 5.5rem;
+    font-size: 6rem;
     font-weight: bold;
-    color: #1a3d7c; /* Darker Blue */
-    padding: 20px;
+    color: #273B6D;
 }
 
-/* 📌 Scroll Down Text (Now Clickable) */
+.wave {
+    font-size: 8rem;
+}
+
 .scroll-down {
-    font-family: "Josefin Sans", sans-serif;
-    text-align: center;
-    display: block;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #007bff;
-    text-decoration: none;
-    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #273B6D;
 }
 
-.scroll-down:hover {
-    color: #0056b3;
+/* 📌 Hero Image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 800px;
+    height: auto;
 }
 
 
@@ -235,26 +244,35 @@ body {
     padding-bottom: 30px;
 }
 
+/* 📌 Podcast Section */
 .podcast {
-    padding-top: 30px;
+    text-align: center;
+    padding: 100px;
+    font-family: 'Copperplate', sans-serif;
 }
 
-/* 📌 Enlarged Spotify Embed to Show More Episodes */
-/* 📌 Fix Podcast Players */
+.podcast h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #273B6D;
+}
+
+.podcast p {
+    color: #273B6D;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .podcast iframe {
     width: 100%;
-    max-width: 600px;
-    margin: auto;
+    max-width: 660px;
+    height: 450px;
+    margin: 20px auto;
     display: block;
+    border-radius: 10px;
 }
 
 
-/* 📌 Styled Contact Me Section */
-.contact p {
-    font-family: "Josefin Sans", sans-serif;
-    text-align: center;
-    padding-bottom: 20px;
-}
 
 /* 📌 Contact Form Section */
 #contact-form-section {
@@ -268,7 +286,7 @@ body {
     max-width: 500px;
     margin: auto;
     background: white;
-    padding: 25px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -277,6 +295,15 @@ body {
 /* 📌 Contact Form Header */
 #contact-form-section h2 {
     font-family: Copperplate, "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* 📌 Contact Form Paragraph */
+#contact-form-section p {
+    font-size: 1.2rem;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 20px;
 }
 
 /* 📌 Form Labels & Fields */
@@ -285,15 +312,17 @@ body {
     font-weight: bold;
     display: block;
     margin-top: 10px;
+    font-size: 1.1rem;
 }
 
 .contact-form input, 
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: "Josefin Sans", sans-serif;
+    font-size: 1.1rem;
     margin-top: 5px;
 }
 
@@ -302,10 +331,11 @@ body {
     background: #007bff;
     color: white;
     border: none;
-    padding: 12px;
+    padding: 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+    font-size: 1.2rem; /* Bigger Font */
     margin-top: 10px;
 }
 
@@ -315,69 +345,78 @@ body {
 
 
 
-
-
-/* 📌 Footer */
-.footer {
+/* 📌 Fix Footer */
+.footer-container {
     text-align: center;
     padding: 20px;
-    background: #f8f9fa;
+    background: white;
+    border-top: 3px solid navy;
 }
 
-/* 📌 Footer Navigation Menu */
+/* 📌 Footer Menu Opens Downward */
 .footer-menu {
     display: none;
     flex-direction: column;
-    text-align: center;
-    padding-top: 20px;
+    background: white;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .footer-menu.active {
     display: flex;
 }
 
-/* 📌 Mobile Styles (Up to 768px) */
-@media (max-width: 768px) {
-    
-    /* ✅ Fix Header Layout */
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* ✅ Fix Hero Section */
+/* 📌 Responsive Styles (Tablets & Mobile) */
+@media (max-width: 1024px) {
+    /* ✅ Adjust Hero Section */
     .hero {
         flex-direction: column;
+        height: auto;
+        padding: 60px 20px;
         text-align: center;
-        padding: 80px 20px;
     }
 
     .hero-content {
-        padding: 0;
+        max-width: 100%;
+        text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 4rem; /* Reduce size for mobile */
+        font-size: 4rem;
     }
 
     .hero-image img {
-        max-width: 300px;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
     }
 
-    /* ✅ Scroll Down Text (Keep it Below Hero Copy) */
+    /* ✅ Adjust Scroll Down */
     .scroll-down {
-        display: block;
-        margin-top: 20px;
-        font-size: 1rem;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 1.2rem;
     }
 
-    /* ✅ Fix Portfolio Grid */
-    .portfolio-grid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
+    /* ✅ Podcast Section */
+    .podcast {
+        padding: 60px 20px;
     }
 
-    /* ✅ Reduce Product Card Size for Mobile */
+    .podcast h2 {
+        font-size: 2.5rem;
+    }
+
+    .podcast iframe {
+        max-width: 90%;
+        height: 380px;
+    }
+
+    /* ✅ My Creations Section */
     .project-container {
         flex-direction: column;
         align-items: center;
@@ -385,28 +424,47 @@ body {
 
     .project-item {
         width: 90%;
-        max-width: 320px;
+        max-width: 350px;
     }
 
-    /* ✅ Fix Contact Form & Newsletter */
+    /* ✅ Contact Form Adjustments */
     #contact-form-section {
-        padding: 20px;
+        padding: 40px 20px;
     }
 
     .contact-form {
         max-width: 90%;
+        padding: 20px;
     }
 
-    /* ✅ Fix Podcast Players (Spotify & Apple) */
-    .podcast iframe {
-        width: 100%;
-        max-width: 90%;
-        margin: auto;
+    .contact-form button {
+        font-size: 1.1rem;
+        padding: 12px;
     }
 
-    /* ✅ Fix Footer Menu */
+    /* ✅ Fix Header & Footer Navigation for Mobile */
+    .nav-links,
     .footer-menu {
-        text-align: center;
-        padding-top: 10px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active,
+    .footer-menu.active {
+        display: flex;
+    }
+
+    /* ✅ Fix Footer Navigation Opening Direction */
+    .footer-menu {
+        top: auto;
+        bottom: 60px;
     }
 }
+
