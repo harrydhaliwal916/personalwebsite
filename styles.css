@@ -96,10 +96,69 @@ p {
 }
 
 .hero-content h1 {
-    font-size: 6rem;
+    font-family: 'Copperplate', serif;
+    font-size: 4rem; /* Down from 6rem for better flow */
     font-weight: bold;
     color: #273B6D;
+    line-height: 1.2;
 }
+
+.hero-content p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25rem; /* around 20px */
+    line-height: 1.6;
+    color: #333;
+    margin: 20px 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    padding: 12px 24px;
+    text-decoration: none;
+    background-color: #273B6D;
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #1e2f59;
+}
+
+.cta-btn.secondary {
+    background-color: transparent;
+    color: #273B6D;
+    border: 2px solid #273B6D;
+}
+
+.cta-btn.secondary:hover {
+    background-color: #f5f5f5;
+}
+
+.wave {
+    display: inline-block;
+    animation: wave 2s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(14deg); }
+    30% { transform: rotate(-8deg); }
+    45% { transform: rotate(14deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
 
 /* 📌 Fix Hero Image Positioning */
 .hero-image {
@@ -596,10 +655,39 @@ p {
 }
 
 /* 📌 📱 Small Mobile Screens (iPhones, etc.) */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 3rem;
+    @media (max-width: 768px) {
+    /* 🧱 Your existing mobile styles (like hero height, layout, etc.) */
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+        height: auto;
     }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .cta-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
 
     .scroll-down {
         font-size: 1rem;
